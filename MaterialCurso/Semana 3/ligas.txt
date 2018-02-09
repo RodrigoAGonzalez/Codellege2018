@@ -5,3 +5,8 @@ https://www.w3schools.com/html/html_forms.asp
 
 CSS
 https://www.teaching-materials.org/htmlcss/lesson4/slides#slide1
+
+ATOM
+https://www.shopify.com/partners/blog/best-atom-packages-2017
+https://atom.io/packages
+https://docs.emmet.io/cheat-sheet/
