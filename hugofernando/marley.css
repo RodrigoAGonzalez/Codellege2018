@@ -1,0 +1,42 @@
+.parrafomarley{
+float: left;
+width: 25%;
+color: green;
+}
+
+.parrafohierba{
+float: rigth;
+width: 100%;
+color: green;
+}
+
+h1{
+   text-align:center;
+   color: yellow;
+  }
+
+h2{
+   text-align:center;
+   color: yellow;
+  }
+
+body{
+      background-color: black;
+    }
+
+
+.border {
+  border-style: none;
+ background-color: red;
+}
+
+.imagenmarley {
+  margin: 35px;
+  float: left;
+}
+
+.imagenhierba {
+  margin: 35px;
+  float: right;
+}
+
