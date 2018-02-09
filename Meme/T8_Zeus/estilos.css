@@ -1,0 +1,56 @@
+.header {
+	color: white;
+	background-image: url("http://slotopaint.com/wp-content/uploads/2017/12/zeus_background.png");
+	background-color: #0E0F4B;
+	font-family: serif;
+	text-align: center;
+	margin-top: -22px;
+	margin-left: 90px;
+	margin-right: 90px;
+}
+.info{
+	text-align: left;
+	width: 50%;
+}
+.content {
+	background-color: #2d2151;
+	margin-top: -20px;
+	height: 600px;
+	color: white;
+	font-family: serif;
+	margin-left: 90px;
+	margin-right: 90px;
+}
+#enc {
+	text-align: center;
+}
+.image {
+	margin: 30px;
+	float: left;
+}
+.info2{
+	float: right;
+	text-align: right;
+	width: 45%;
+	margin-top: -391px;
+}
+#enc2 {
+	text-align: center;
+}
+.image2 {
+	margin: 30px;
+	float: right;
+}
+#par2 {
+	text-align: justify;
+}
+#par {
+	text-align: justify;
+}
+#pie {
+	color: inherit;
+	text-align: center;
+	margin-top: 200px;
+	background-color: #5F5485;
+	height: 25px;
+}
