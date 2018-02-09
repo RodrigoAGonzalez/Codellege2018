@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<HTML>
+	
+	<HEAD>
+		<TITLE> Forms | input </TITLE>
+		<META CHARSET="UTF-8"/>
+		<script>
+			function validarInfo(){
+				var nombreValue = document.getElementById('inombre').value;
+				var contrasenaValue = document.getElementById('icontraseña').value
+				var sexo = document.getElementsByName('sexo');
+				var sexoValue=[];
+				var interesesValue=[];
+				for(var i=0; sexo[i]; ++i){
+			      if(sexo[i].checked){
+			           sexoValue = sexo[i].value;
+			      }
+				}
+				var intereses = document.getElementsByName('intereses[]');
+				var n = 0;
+				for(var j = 0; intereses[j];j++){
+					if(intereses[j].checked){
+						interesesValue[n] = intereses[j].value;
+						n = n+1;
+					}
+				}
+
+				alert("Nombre: "+nombreValue+"\nContraseña: "+contrasenaValue+"\nSexo: "+sexoValue+"\nIntereses: "+interesesValue);
+			}
+		</script>
+	</HEAD>
+	<BODY id="body">
+			<FORM action="registrar.php" method="GET">
+				Nombre:<INPUT TYPE="TEXT" PLACEHOLDER="INTRODUCE TU NOMBRE" id="inombre" name ="nombre" /> <br/>
+				Contraseña:<INPUT TYPE="PASSWORD" PLACEHOLDER="INTRODUCE TU CONTRASEÑA" id="icontraseña" name = "password"/><br/><br/>
+
+				Sexo:<br/>
+				<INPUT TYPE="radio" VALUE="Hombre" name="sexo" checked/>Hombre<br/>
+				<INPUT TYPE="radio" VALUE="Mujer" name="sexo" />Mujer<br/><br/>
+
+				Intereses:<br/>
+				<input type="checkbox" name="intereses[]" value="Programacion" />Programación<br/>
+				<input type="checkbox" name="intereses[]" value="Soporte" />Soporte<br/><br/>
+
+				<input type="button" onclick="validarInfo()" value="Validar Informacion"/>
+
+				<INPUT TYPE="submit" VALUE="Registrar"/> 
+
+
+			</FORM>
+	</BODY>
+
+</HTML>
