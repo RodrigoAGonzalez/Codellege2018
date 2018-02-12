@@ -1,10 +1,9 @@
 HTML
-www.google.com (la más importante :P)
 https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Your_first_HTML_form 
 https://www.w3schools.com/html/html_forms.asp 
 
 CSS
-https://www.teaching-materials.org/htmlcss/lesson4/slides#slide1
+https://www.teaching-materials.org/htmlcss/lesson4/slides#slide1 (todas las diapositivas)
 
 ATOM
 https://www.shopify.com/partners/blog/best-atom-packages-2017
