@@ -1,0 +1,53 @@
+
+h1 {
+    text-align: center;
+    color: white;
+  }
+h2 {
+    text-align: center;
+    color: white;
+}
+h3 {
+    text-align: center;
+    color: white;
+}
+body {
+  	background-color: green;
+  	margin-top: 0%
+    auto;
+}
+
+#parrafo{
+text-align: left;
+float: left;
+width: 50%;
+color: white;
+}
+#parrafo2 {
+  float: right;
+width: 30%;
+color: white;
+}
+#derechos {
+	color: inherit;
+	text-align: justify;
+	margin-top: 500px;
+	background-color: black;
+	height: 30px;
+}
+.cultos {
+  left;
+  text-align: center;
+  color: white;
+}
+.border {
+ background-color: black;
+}
+.image {
+  margin: 30px;
+float: left;
+}
+.image2 {
+ margin: 30px;
+float: right;
+}
