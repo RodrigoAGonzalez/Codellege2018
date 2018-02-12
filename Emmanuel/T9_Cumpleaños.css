@@ -1,0 +1,22 @@
+h1, h2, {
+  color: white;
+}
+
+body {
+  background-color: rgba(224, 228, 191, 0.44);
+}
+
+main {
+  width: 80%;
+  background-color: rgb(70, 41, 168);
+}
+
+footer {
+  align: center;
+  background-color: rgb(5, 1, 1);
+}
+
+#listas {
+  float: left;
+  overflow: auto;
+}
