@@ -12,42 +12,56 @@ h3 {
     color: white;
 }
 body {
-  	background-color: green;
+  	background-color: rgb(41, 73, 103);
   	margin-top: 0%
     auto;
+}
+#Todoeltexto{
+text-align: auto;
+margin: auto;
+background-color: cyan
 }
 
 #parrafo{
 text-align: left;
 float: left;
-width: 50%;
-color: white;
+width: 60%;
+color: black;
+overflow: auto;
+background-color: rgb(217, 218, 226)
 }
 #parrafo2 {
   float: right;
-width: 30%;
-color: white;
+width: 40%;
+color: black;
+overflow: auto;
+background-color: rgb(217, 218, 226)
 }
 #derechos {
 	color: inherit;
-	text-align: justify;
-	margin-top: 500px;
+	text-align: center;
+	margin-top: 405px;
 	background-color: black;
-	height: 30px;
+	height: 25px;
 }
 .cultos {
   left;
   text-align: center;
-  color: white;
+  color: black;
+}
+.origenes{
+  right;
+  text-align: center;
+  color: black
 }
 .border {
  background-color: black;
 }
 .image {
   margin: 30px;
-float: left;
+  float: left;
 }
 .image2 {
- margin: 30px;
+ margin: 35px;
 float: right;
 }
