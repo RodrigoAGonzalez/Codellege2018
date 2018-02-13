@@ -1,0 +1,14 @@
+h1.hidden {
+ display: inline;
+    /* display: inline-block;*/
+}
+
+a {
+  display: inline;
+  width: 100px;
+  border: 1px solid black;
+}
+
+span {
+  display: block;
+}
