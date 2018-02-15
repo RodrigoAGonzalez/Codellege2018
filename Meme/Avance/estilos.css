@@ -16,7 +16,6 @@ body {
 .content {
   background-color: rgb(70, 215, 67);
   margin: 5%;
-
   opacity: 0.95;
   border-radius: 15px;
   box-shadow: 5px 5px rgb(56, 138, 46);
@@ -127,7 +126,6 @@ section {
   padding: 5px;
 }
 .OverflowAuto2 {
-
   background-color: rgb(64, 167, 93);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -146,7 +144,6 @@ section {
   padding: 5px;
 }
 .OverflowAuto3 {
-
   border-style: dashed;
   background-color: rgb(199, 90, 168);
   border-top-right-radius: 20px;
@@ -277,6 +274,31 @@ section {
   font-size: 56px;
   box-shadow: 5px 5px rgb(27, 55, 119);
 }
+.pseudo {
+  margin-top: -2%;
+  text-align: center;
+  font-size: 36px;
+  margin-right: 40%;
+  margin-left: 40%;
+  font-family: 'Amatic SC', cursive;
+}
+p:link {
+    color: red;
+}
+p:visited {
+    color: green;
+}
+p:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 191, 0);
+    border-radius: 24px;
+    border-style: dashed;
+    border-color: black;
+    box-shadow: 5px 5px rgb(199, 161, 26);
+}
+p:active {
+    color: white;
+}
 #fnt {
   text-align: center;
   font-size: 32px;
@@ -294,4 +316,8 @@ section {
   left: 90%;
   top: 5%;
   z-index: 1;
+}
+::selection {
+    color: rgb(255, 184, 0);
+    background: black;
 }
