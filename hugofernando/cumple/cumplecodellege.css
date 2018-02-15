@@ -6,6 +6,29 @@ ul{
   list-style-type: none;
 }
 
+h1::before {
+  content: "";
+  display: inline-block;
+    background-image: url(pastel.png);
+    background-size: 100% 100%;
+    width: 100px;
+    height: 150px;
+}
+
+h1::after {
+  content: "";
+  display: inline-block;
+    background-image: url(pastel.png);
+    background-size: 100% 100%;
+    width: 100px;
+    height: 150px;
+}
+
+h2::first-letter {
+    color: rgb(75, 94, 223);
+    font-size: xx-large;
+}
+
 header{
     text-align: center;
     font-family: 'comic sans', sans-serif;
@@ -13,16 +36,32 @@ header{
     color: blue;
 }
 
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
+
 section{
-  background-color: rgb(165, 215, 211);
+  background-color: rgba(165, 215, 211, 0.73);
   }
+
+section:hover {
+    background-color: rgba(97, 241, 8, 0.62);
+}
 
 aside{
   font-family: 'comic sans' , sans-serif;
   float: right;
-  padding: 130px;
-  background-color: rgb(165, 215, 211);
+  padding: 135px;
+  background-color: rgba(165, 215, 211, 0.53);
   color: white;
+}
+
+aside:hover {
+    background-color: rgba(246, 6, 236, 0.52);
 }
 
 div{
@@ -38,4 +77,12 @@ Footer{
     font-family: "comic sans" , sans-serif;
     background-color: rgb(231, 120, 193, 0.3);
     color: blue;
+  }
+
+  h3::before {
+      content: url(face.png);
+  }
+
+  h3::after {
+      content: url(face.png);
   }
