@@ -16,7 +16,7 @@ body {
 .content {
   background-color: rgb(70, 215, 67);
   margin: 5%;
-  height: 2790px;
+
   opacity: 0.95;
   border-radius: 15px;
   box-shadow: 5px 5px rgb(56, 138, 46);
@@ -109,10 +109,9 @@ section {
   font-weight: bold;
 }
 .OverflowAuto {
+  padding-top: 30px;
   margin-left: -0.20%;
   background-color: rgb(255, 161, 0);
-  height: 300px;
-  width: 50%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-style: dashed;
@@ -120,8 +119,6 @@ section {
 #Dint1 {
   padding: 0.50%;
   margin-left: 5%;
-  width: 18.5%;
-  height: 51%;
   margin-top: -12%;
 }
 .perfil {
@@ -130,10 +127,8 @@ section {
   padding: 5px;
 }
 .OverflowAuto2 {
-  margin-left: 49.85%;
+
   background-color: rgb(64, 167, 93);
-  height: 300px;
-  width: 50%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-style: dashed;
@@ -151,11 +146,9 @@ section {
   padding: 5px;
 }
 .OverflowAuto3 {
-  margin-left: -0.20%;
+
   border-style: dashed;
   background-color: rgb(199, 90, 168);
-  height: 300px;
-  width: 50%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-color: white;
@@ -174,10 +167,7 @@ section {
   padding: 5px;
 }
 .OverflowAuto4 {
-  margin-left: 49.85%;
   background-color: rgb(29, 115, 230);
-  height: 300px;
-  width: 50%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-style: dashed;
@@ -197,11 +187,8 @@ section {
   padding: 5px;
 }
 .OverflowAuto5 {
-  margin-left: -0.20%;
   border-style: dashed;
   background-color: rgb(196, 39, 39);
-  height: 300px;
-  width: 50%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-color: white;
@@ -220,10 +207,8 @@ section {
   padding: 5px;
 }
 .OverflowAuto6 {
-  margin-left: 49.85%;
+  padding-top: 10px;
   background-color: rgb(30, 46, 116);
-  height: 300px;
-  width: 50%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-style: dashed;
@@ -243,11 +228,9 @@ section {
   padding: 5px;
 }
 .OverflowAuto7 {
-  margin-left: -0.20%;
+  padding-top: 30px;
   border-style: dashed;
   background-color: rgb(44, 144, 24);
-  height: 300px;
-  width: 50%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -264,10 +247,8 @@ section {
   padding: 5px;
 }
 .OverflowAuto8 {
-  margin-left: 49.85%;
+  padding-top: 30px;
   background-color: rgb(230, 169, 220);
-  height: 300px;
-  width: 50%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
