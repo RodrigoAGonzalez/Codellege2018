@@ -10,7 +10,7 @@ header{
     text-align: center;
     font-family: 'comic sans', sans-serif;
     background-image: url("confetiheader.jpg");
-    color: green;
+    color: blue;
 }
 
 section{
@@ -28,7 +28,7 @@ aside{
 div{
   text-align: center;
   font-family: 'monospace', sans-serif;
-  background-color: rgb(15, 221, 244);
+  background-color: rgb(15, 221, 244,0.3);
   color: green;
     }
 
@@ -36,6 +36,6 @@ div{
 Footer{
     text-align: center;
     font-family: "comic sans" , sans-serif;
-    background-color: rgb(231, 120, 193);
-    color: white;
+    background-color: rgb(231, 120, 193, 0.3);
+    color: blue;
   }
