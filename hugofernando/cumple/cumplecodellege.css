@@ -1,0 +1,41 @@
+body{
+   background-image: url("confetiheader.jpg");
+}
+
+ul{
+  list-style-type: none;
+}
+
+header{
+    text-align: center;
+    font-family: 'comic sans', sans-serif;
+    background-image: url("confetiheader.jpg");
+    color: blue;
+}
+
+section{
+  background-color: rgb(165, 215, 211);
+  }
+
+aside{
+  font-family: 'comic sans' , sans-serif;
+  float: right;
+  padding: 130px;
+  background-color: rgb(165, 215, 211);
+  color: white;
+}
+
+div{
+  text-align: center;
+  font-family: 'monospace', sans-serif;
+  background-color: rgb(15, 221, 244,0.3);
+  color: green;
+    }
+
+
+Footer{
+    text-align: center;
+    font-family: "comic sans" , sans-serif;
+    background-color: rgb(231, 120, 193, 0.3);
+    color: blue;
+  }

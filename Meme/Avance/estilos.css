@@ -1,0 +1,297 @@
+body {
+  background-image: url(https://pre00.deviantart.net/8cc1/th/pre/i/2018/043/2/b/globos_by_memerodriguez-dc30q94.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+.enc {
+  text-align: center;
+  background-color: rgb(255, 207, 0);
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+  margin: 5%;
+  border-radius: 15px;
+  box-shadow: 5px 5px rgb(227, 199, 15);
+}
+.content {
+  background-color: rgb(70, 215, 67);
+  margin: 5%;
+
+  opacity: 0.95;
+  border-radius: 15px;
+  box-shadow: 5px 5px rgb(56, 138, 46);
+  border-style: dashed;
+  border-color: rgb(75, 168, 42);
+}
+section {
+  font-family: 'Varela Round', sans-serif;
+}
+.name1 {
+  text-align: center;
+  font-size: 24px;
+}
+.name2 {
+  text-align: center;
+  font-size: 24px;
+}
+.name3 {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.name4 {
+  text-align: center;
+  font-size: 24px;
+  color: white
+}
+.name5 {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.name6 {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.name7 {
+  text-align: center;
+  font-size: 24px;
+}
+.name8 {
+  text-align: center;
+  font-size: 24px;
+}
+.nac1 {
+  margin-left: 30%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nac2 {
+  margin-left: 25%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nac3 {
+  margin-left: 30%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.nac4 {
+  margin-left: 25%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.nac5 {
+  margin-left: 30%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.nac6 {
+  margin-left: 22%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nac7 {
+  margin-left: 30%;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+.nac8 {
+  margin-left: 22%;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+.OverflowAuto {
+  padding-top: 30px;
+  margin-left: -0.20%;
+  background-color: rgb(255, 161, 0);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-style: dashed;
+}
+#Dint1 {
+  padding: 0.50%;
+  margin-left: 5%;
+  margin-top: -12%;
+}
+.perfil {
+  border-style: dashed;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto2 {
+
+  background-color: rgb(64, 167, 93);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-style: dashed;
+}
+#Dint2 {
+  padding: 0.50%;
+  margin-left: 68%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -10%;
+}
+.perfil2 {
+  border-style: dashed;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto3 {
+
+  border-style: dashed;
+  background-color: rgb(199, 90, 168);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-color: white;
+}
+#Dint3 {
+  padding: 0.50%;
+  margin-left: 5%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -14%;
+}
+.perfil3 {
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto4 {
+  background-color: rgb(29, 115, 230);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-style: dashed;
+  border-color: white;
+}
+#Dint4 {
+  padding: 0.50%;
+  margin-left: 68%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -10%;
+}
+.perfil4 {
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto5 {
+  border-style: dashed;
+  background-color: rgb(196, 39, 39);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-color: white;
+}
+#Dint5 {
+  padding: 0.50%;
+  margin-left: 5%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -16%;
+}
+.perfil5 {
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto6 {
+  padding-top: 10px;
+  background-color: rgb(30, 46, 116);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-style: dashed;
+  border-color: white;
+}
+#Dint6 {
+  padding: 0.50%;
+  margin-left: 68%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -10%;
+}
+.perfil6 {
+  border-style: dashed;
+  border-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto7 {
+  padding-top: 30px;
+  border-style: dashed;
+  background-color: rgb(44, 144, 24);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#Dint7 {
+  padding: 0.50%;
+  margin-left: 5%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -12%;
+}
+.perfil7 {
+  border-style: dotted;
+  border-radius: 50%;
+  padding: 5px;
+}
+.OverflowAuto8 {
+  padding-top: 30px;
+  background-color: rgb(230, 169, 220);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-style: dashed;
+}
+#Dint8 {
+  padding: 0.50%;
+  margin-left: 68%;
+  width: 18.5%;
+  height: 51%;
+  margin-top: -10%;
+}
+.perfil8 {
+  border-style: solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+.TopBottomBorder {
+  margin-left: 40%;
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(32, 117, 245);
+  border-radius: 4px;
+  border-style: dashed;
+  font-family: 'Amatic SC', cursive;
+  font-size: 56px;
+  box-shadow: 5px 5px rgb(27, 55, 119);
+}
+#fnt {
+  text-align: center;
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+  font-family: 'Chelsea Market', cursive;
+}
+#balln {
+  position: absolute;
+  left: 5%;
+  top: 0%;
+  z-index: 1;
+}
+#balln2 {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+  z-index: 1;
+}
