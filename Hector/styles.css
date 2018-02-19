@@ -1,0 +1,39 @@
+#principal{
+  width: 900px;
+  height: 1000px;
+  border: 1px solid #000;
+  margin: auto;
+}
+
+header{
+  width: 900px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+#logo{
+  width: 200px;
+  height: 10px;
+  border: 1px solid #000
+   float:left;
+
+}
+
+.menu{
+  width: 600px;
+  height: 40px:
+  border: 1px; solid #ccc;
+  float: right;
+  margin-top: 40px;
+  background-color: #006699;  
+}
+
+.menu ul li {
+  list-style: none;
+  float: right;
+}
+
+  .menu ul li a{
+    text-decoration: none;
+    padding: 10px; 12px;
+  }
