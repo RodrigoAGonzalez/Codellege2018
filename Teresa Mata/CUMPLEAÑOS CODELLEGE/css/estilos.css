@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  {
+  box-sizing: border-box;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: 'Open Sans', 'sans-serif';
+  background-size: 100% 100%;
+}
+
+.wrapper{
+  background-image: url("../img/banner.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1.5px;
+}
+/*----------------------------Estilos del header-----------------------------------*/
+.header {
+  height: 100;
+}
+h1{
+  font-size: 120px;
+  text-align: center;
+  color: #fff;
+}
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+.logo, .icon-menu {
+  margin: 5px;
+  color: #black;
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #FBA919;
+  color: #black;
+  text-align: center;
+  line-height: 45px; border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+
+}
+
+/*------------------------------------------Estilos del Menu-----------------------------------*/
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  background: #FBA919;
+  text-decoration: none;
+  color: #black;
+}
+
+.menu__link:hover, .select {
+  background-color: #ffecc6;
+  color: #FBA919;
+
+}
+
+.mostrar {
+  left: 0;
+}
+
+/*----------------------------Estilo de info-------------------------------------------------*/
+.info__columna{
+  background: #FBA919;
+  background-position: top;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  color: #black;
+  padding: 100px;
+  border: 1px solid black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+}
+/*------------------------------------------------Estilo de Footer----------------------------*/
+.footer{
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.fooder .social [class^="icon-"]{
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 10px;
+  background: #white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+
+}
+/*-----------------------------------------------Estilo de responsive------------------------------------------*/
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 80px;
+}
