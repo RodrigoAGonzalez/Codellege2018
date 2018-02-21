@@ -1,0 +1,85 @@
+h1, h2, {
+  color: white;
+}
+
+body {
+  background-color: black;
+  margin: auto;
+  border: 50px;
+}
+
+#comocaiga {
+  background-image: url("https://i.ytimg.com/vi/9WnXvVewQoQ/maxresdefault.jpg");
+  text-align: center;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 15px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#popo {
+  background-image: url("https://www.cumpleanosimagenes.org/wp-content/uploads/2016/01/imagenes-de-cumplea%C3%B1os.jpg");
+  color: black;
+  border-radius: 15px;
+  margin-left: 22%;
+  margin-right: 10%;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0%;
+}
+
+header {
+  background-color:black;
+  text-align: center;
+  color: white;
+}
+
+/******IDs morros***/
+
+#listas {
+  position: fixed;
+  color: gray;
+  background-color: black;
+ width: 20%;
+ height: 500px;
+}
+.colores{
+  color: gray;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+}
+.ul{
+  list-style: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+.ul li {
+  border-radius: 5px;
+  border: 5px solid yellow;
+  background-color: white;
+  height: 3%;
+  margin-bottom: 20px;
+}
+.ul li:hover{
+  background-color: white;
+  color: white;
+ }
+.ul li a:hover{
+  color:black;
+}
+.ul li a{
+      letter-spacing: 2px;
+      text-align: center;
+}

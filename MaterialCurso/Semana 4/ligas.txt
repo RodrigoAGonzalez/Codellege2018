@@ -1,0 +1,8 @@
+HTML5 Semantics
+
+https://www.w3schools.com/html/html5_semantic_elements.asp
+https://www.pluralsight.com/guides/html-css/semantic-html
+
+Repositorio Ejercicio Biografia 
+https://github.com/morecallan/HTML-exercise-personal-bio
+

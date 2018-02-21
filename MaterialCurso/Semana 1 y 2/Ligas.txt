@@ -1,0 +1,14 @@
+Repositorio del curso:
+https://github.com/RodrigoAGonzalez/Codellege2018
+
+Tutorial, Ejemplos y Ejercicios de HTML (Recomendado Ampliamente):
+https://www.w3schools.com/html/ 
+
+Tutoriales CSS:
+http://librosweb.es/libro/css/ 
+https://www.w3schools.com/css/ 
+
+Tutoriales Git:
+http://rogerdudler.github.io/git-guide/index.es.html (Guía básica)
+https://git-scm.com/book/es/v1/Empezando (Tutorial extenso y con más detalles)
+
