@@ -1,0 +1,17 @@
+:root{
+--background-image:url(https://codellege.com/assets/images/DSC_0011.jpg);
+--background-repeat:no-repeat;
+--background-size:cover;
+--color:white;
+--font-size:50px;
+}
+
+
+body{
+background-image:var(background-image);
+height:100%;
+width:100%;
+margin: 0;
+padding:0;
+}
+Span
