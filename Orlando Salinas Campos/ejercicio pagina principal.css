@@ -6,7 +6,8 @@
 --font-size:50px;
 }
 
-
+header{background-color: black;
+}
 body{
 background-image:var(background-image);
 height:100%;
