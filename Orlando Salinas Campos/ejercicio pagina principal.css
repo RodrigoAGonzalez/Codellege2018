@@ -1,17 +1,63 @@
-:root{
---background-image:url(https://codellege.com/assets/images/DSC_0011.jpg);
---background-repeat:no-repeat;
---background-size:cover;
---color:white;
---font-size:50px;
+
+header{
+position: fixed;
+z-index:2;
+}
+.BlackBackground{
+background: black;
+}
+.WhiteColor{
+font-size: 13px;
+margin-right: 10px;
+color: white;
 }
 
+.WhiteColor:hover{
+color: yellowgreen;
+}
+nav > a > img{
+  height: 35px;
+}
+.apply{
+background: url('https://codellege.com/assets/images/DSC_0011.jpg')
+}
+.how{
+background: url('https://codellege.com/assets/images/DSC_0010.jpg')
+}
+.contact{
+background: url('https://codellege.com/assets/images/DSC_0027.jpg')
+}
+.learn{
+background: url('https://codellege.com/assets/images/cgllg3.jpg')
+}
+.pagesection{
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+}
+.fullheight{
+height:100vh;
+}
 
-body{
-background-image:var(background-image);
-height:100%;
+.title{
+position:absolute;
+z-index:1;
 width:100%;
-margin: 0;
-padding:0;
+text-align:center;
 }
-Span
+.apply-btn{
+border: 2px solid white;
+color: white;
+font-size: 2rem;
+font-weight:bold;
+
+padding-left: 2rem;
+padding-right: 2rem;
+padding-bottom:0.75rem;
+padding-top:0.75rem;
+}
+.apply-btn hover{
+border :3px solid yellowgreen;
+color:yellowgreen;
+text-decoration: none;
+}
