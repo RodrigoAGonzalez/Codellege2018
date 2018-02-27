@@ -11,13 +11,10 @@ font-size: 13px;
 margin-right: 10px;
 color: white;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 .WhiteColor:hover{
 color: yellowgreen;
 }
-nav > a > img{
+.codellege{
   height: 35px;
 }
 .apply{
@@ -42,17 +39,10 @@ height:100vh;
 }
 
 .title{
+color:white;
 position:absolute;
+top:45%;
 z-index:1;
-=======
-=======
->>>>>>> 039edfb9cb3c660ccf0a1d736925528a075d21db
-header{background-color: black;
-}
-body{
-background-image:var(background-image);
-height:100%;
->>>>>>> 551a76963895a8dac80560993347a3b0ad293729
 width:100%;
 text-align:center;
 }
