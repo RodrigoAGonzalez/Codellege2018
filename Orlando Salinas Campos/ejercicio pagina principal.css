@@ -12,6 +12,7 @@ margin-right: 10px;
 color: white;
 }
 
+<<<<<<< HEAD
 .WhiteColor:hover{
 color: yellowgreen;
 }
@@ -42,6 +43,13 @@ height:100vh;
 .title{
 position:absolute;
 z-index:1;
+=======
+header{background-color: black;
+}
+body{
+background-image:var(background-image);
+height:100%;
+>>>>>>> 551a76963895a8dac80560993347a3b0ad293729
 width:100%;
 text-align:center;
 }
