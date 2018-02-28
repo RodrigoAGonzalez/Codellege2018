@@ -27,6 +27,9 @@ background: url('https://codellege.com/assets/images/DSC_0010.jpg')
 background: url('https://codellege.com/assets/images/DSC_0027.jpg')
 }
 .learn{
+background: url('https://codellege.com/assets/images/DSC_0025.jpg')
+}
+.why{
 background: url('https://codellege.com/assets/images/cgllg3.jpg')
 }
 .pagesection{
@@ -68,8 +71,26 @@ vertical-align: middle;
 text-align:center;
 color: white;
 }
+.send-btn{
+}
+.send-btn hover{
+border :3px solid yellowgreen;
+color:yellowgreen;
+text-decoration: none;
+}
 .displaytable{
   display: table;
   width: 100% ;
+}
+form{
+display:inline-table;
+}
+form .leftform{
+  display:inline-block;
+  margin-right:
+}
+form .left {
+}
+.aviso{
 
 }
