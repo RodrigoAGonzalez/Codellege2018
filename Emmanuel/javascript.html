@@ -8,8 +8,60 @@
   <script src="alerts.js" type= "text/javascript"> </script>
   <script src="math.js" type= "text/javascript"> </script>
   <script >
-    var suma = addnumbers (120,50);
-    mostrarholaconparametro("Que onda", suma);
+    var lista_nombres = [
+      "Emmanuel", "kevo", "elena", "alex", "meme", "hugo", "tere", "orla", "hector", "rodro"
+    ];
+    var lista_edades = [
+      23,
+      22,
+      30,
+      20,
+      26,
+      25,
+      16
+    ];
+    alert(lista_nombres [0] + "-" + lista_edades [0]);
+    alert(lista_nombres [1] + "-" + lista_edades [1]);
+    alert(lista_nombres [2] + "-" + lista_edades [0]);
+    alert(lista_nombres [3] + "-" + lista_edades [6]);
+    alert(lista_nombres [4] + "-" + lista_edades [3]);
+    alert(lista_nombres [5] + "-" + lista_edades [2]);
+    alert(lista_nombres [6] + "-" + lista_edades [4]);
+    alert(lista_nombres [7] + "-" + lista_edades [1]);
+    alert(lista_nombres [8] + "-" + lista_edades [4]);
+    alert(lista_nombres [9] + "-" + lista_edades [5]);
+
+    var perro = {};
+    var nombre = "chancho";
+    var raza = "frenchpudul";
+    perro.nombre = nombre;
+    perro.raza = raza;
+    var pierna1 ={};
+    var pierna2 ={};
+    var boca ={};
+    pierna1.mover = function(){
+      alert( "movió la pierna izquierda");
+    };
+    pierna2.mover = function(){
+      alert("movió la pierna derecha");
+    };
+    boca.mover = function(){
+      alert("ladro alv pariente");
+    };
+
+    function ladrar(){
+      boca.mover();
+    };
+     function caminar(){
+       pierna1.mover();
+       pierna2.mover();
+     };
+      perro.caminar = caminar;
+      perro.caminar();
+      perro.ladrar = ladrar;
+      perro.ladrar();
+      alert(perro.nombre + "-" + perro.raza);
+
   </script>
 </head>
 <body>
