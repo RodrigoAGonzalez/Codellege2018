@@ -41,13 +41,42 @@
         lista_edades.sort();
         alert( lista_edades);
         alert(lista_nombres + "-" + lista_edades);
-
+        alert(lista_nombres[0] + "-" + lista_edades[0]);
 
         var hugo = lista_nombres[5];
 
         var cuatro = numeros[3];
 
        alert( numeros[3] );
+
+
+
+       var persona = {};
+       persona.sexo = 'Hombre';
+       alert( persona.sexo );
+
+       var pierna1 = {};
+       var pierna2 = {};
+
+
+       pierna1.mover = function(){
+         alert( "Movio pierna izquierda");
+       };
+       pierna2.mover = function(){
+         alert( "Movio pierna derecha");
+       };
+
+       function caminar ( piernaIzquierda, piernaDerecha ){
+         piernaIzquierda.mover();
+         piernaDerecha.mover();
+       };
+       persona.caminar = caminar;
+
+       persona.caminar( pierna1, pierna2 );
+
+
+
+
     </script>
   </head>
   <body>
