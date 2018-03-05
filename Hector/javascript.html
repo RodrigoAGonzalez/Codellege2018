@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var a;
+  var x = "hola";
+  var y = "hector";
+  var z= x;
+mostrarholasinparametro();
+mostrarholaconparametro(x,y);
+mostrarholaconparametro( "hola", "mani" );
+
+ z = x;
+ x = "hello";
+ y = "meme";
+
+   mostrarholaconparametro(x,y);
+   mostrarholaconparametro(z,y);
+
+   function mostrarholasinparametro()
+   {
+     alert ("hola orli");
+   }
+
+
+function mostrarholaconparametro(mensaje,nombre)
+{
+
+var alerta = mensaje +"-"+ nombre;
+
+alert( alerta );
+
+}
+
+
+  </script>
+</body>
+</html>
