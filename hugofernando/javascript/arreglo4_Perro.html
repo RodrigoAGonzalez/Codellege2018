@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>arreglo perro</title>
+  <script type="text/javascript">
+    var perro = {};
+
+    var nombre = 'chilaquil';
+    perro.nombre = nombre;
+
+    var raza = 'electrico';
+    perro.raza = raza;
+
+    var ozico = {};
+
+    ozico.ladra = function() {
+      alert("esta ladrando el chilaquil");
+    };
+
+    function ladrando(ozico) {
+      ozico.ladra();
+    };
+
+    perro.ladrando = ladrando;
+
+    perro.ladrando(ozico);
+    alert(perro.raza);
+    alert(perro.nombre);
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

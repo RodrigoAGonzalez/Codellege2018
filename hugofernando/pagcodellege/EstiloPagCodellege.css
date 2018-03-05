@@ -1,0 +1,118 @@
+header{
+  position: fixed;
+  z-index: 2;
+}
+
+.FondoNegro{
+  background-color: black;
+}
+
+.LetrasBlancas{
+  color: white;
+}
+
+.navbar-nav>li>a:hover {
+    color: rgb(35, 221, 19);
+}
+
+.aplica{
+  background: url(https://codellege.com/assets/images/DSC_0011.jpg);
+}
+
+.porque2 {
+  background: url(https://codellege.com/assets/images/DSC_0025.jpg);
+  background-position: center;
+  box-sizing: border-box;
+  border: 15px solid #000000;
+  border-left: 10px solid #000000;
+  border-right: 10px solid #000000;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  display: table;
+}
+
+.aprende2 {
+  background: url(https://codellege.com/assets/images/cgllg3.jpg);
+  background-position: center;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  display: table;
+}
+
+
+
+.displaytablecell{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+
+.displaytable{
+  display: table;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.porquecodellege{
+  background: url(2generacion.jpg);
+}
+
+.contacto{
+  background: url(https://codellege.com/assets/images/DSC_0027.jpg);
+}
+
+
+.secciondepagina{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+.fullaltura{
+  height: 100vh;
+}
+
+
+.titulo{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  top:50%;
+  color: white;
+}
+
+.aplicaboton{
+  border: 3px solid white;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: : 25px;
+  padding-top: : 25px;
+}
+
+.aplicaboton:hover{
+  border: 3px solid yellowgreen;
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+section>div>div> a:hover {
+    color: rgb(35, 221, 19);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>super mercado</title>
+
+
+  <script type="text/javascript">
+
+    ///!* seccion de lista de articulos*///
+    var superMercado = {};
+    var lista_articulos = ['jabon ', 'dulces ', 'huevo ', 'tortilla ', 'machaca ',
+      'burritos ', 'frijol ', 'pan ', 'carne ', 'papitas. '
+    ]
+    mostrar_articulos();
+
+    function mostrar_articulos() {
+      alert("tenemos: " + lista_articulos)
+    }
+
+    ///!* seccion de alerta del empleado*///
+    var empleado = {};
+
+    var nombre = 'Panfilo';
+    empleado.nombre = nombre;
+
+    alert("soy el empleado " + empleado.nombre);
+
+    ///!* seccion de horario de la tienda*///
+    var lista_horario = ['7am ', '22pm '];
+    var sacarHorarioApertura = lista_horario[0];
+    var sacarHorarioCierre = lista_horario[1];
+
+    alert("Nuestro horario es de " + sacarHorarioApertura +
+      "a " + sacarHorarioCierre);
+
+    ///!* Seccion de abrir y cerrar supermercado*///
+    var esclavo ={};
+
+    var nombre2 = 'pancracio';
+    esclavo.nombre2 = nombre2;
+
+    esclavo.abrir = function() {
+      alert( + " esta abriendo la tienda a las " + sacarHorarioApertura);
+    }
+
+    esclavo.cerrar = function() {
+      alert(esclavo.nombre + " ya cerrara la tienda a las " + sacarHorarioApertura);
+    }
+
+    function apertura(empleado, lista_horario) {
+      esclavo.abrir();
+    }
+    
+  </script>
+
+</head>
+
+
+<body>
+</body>
+
+</html>
