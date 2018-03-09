@@ -29,7 +29,7 @@
        "23/01/1998"
      ];
 
-     var  regalo =
+     var  regalos =
      [
        "Le gusta el pastel de chocolate y reganlenle Riot Points",
        "Le gusta los perfumes y la joyeria (Esclavas, cadenas)",
@@ -43,6 +43,8 @@
 
 
 
+
+
     </script>
   </head>
   <style>
@@ -52,14 +54,40 @@
     margin: 0;
     padding: 0;
   }
-
   .BirthdayCard{
     width: 20%;
     height: 15 vw;
     margin: 2vw;
 
+    float: left;
     border: 1px solid #888888;
     border radius: 1px;
+  }
+  .MiddleWidth{
+
+    float: left;
+    width: 50%;
+  }
+  .BirthdayCard > img{
+    width: 50%;
+    height: 100%;
+    float: left;
+  }
+  .MiddleWidth > h3{
+    text-align: center;
+    width: 100%;
+    float: left;
+  }
+  .MiddleWidth > span{
+    width: 100%;
+    float: left;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+  .MiddleWidth > p{
+    margin-top: 2rem ;
+    overflow: hidden;
+    float: left;
   }
 
   </style>
@@ -71,13 +99,29 @@
     </header>
 
     <main>
-      <section>
-        <div class= "BirthdayCard">
-          <img src= "man.png" />
-          <h3>Nombre persona</h3>
-          <span>DD/MM/YYYY</span>
-          <p>Descripcion de lo que le gusta a la persona bla bla bla</p>
-        </div>
+      <section id="ContenedorCumpleaños">
+        <script>
+          var section = document.getElementById( "ContenedorCumpleaños" );
+
+
+          for (var i = 0; i < nombres.length; i++)
+          {
+            var nombre = nombres[i];
+            var fecha = fechas[i];
+            var regalo =  regalos[i];
+
+            section.innerHTML += '' +
+              '<div class= "BirthdayCard">' +
+              '<img src= "man.png" />' +
+              '<div class="MiddleWidth">' +
+              '<h3>' + nombre + '</h3>' +
+              '<span>' + fecha + '</span>' +
+              '<p>' + regalo + '</p>' +
+              '</div>' +
+            '</div>';
+          }
+        </script>
+
       </section>
     </main>
 
