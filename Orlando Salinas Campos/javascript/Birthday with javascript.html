@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+    var personas =
+    [
+      {
+       nombre: "kevin",
+       apellido: "martin"
+       fecha: "14/04/1995"
+       regalo: "le gusta el pastel"
+       sexo: "m"
+       imagen:"orlando.png"
+     },
+      {
+        nombre: "rodrigo",
+        apellido: "Gonzales",
+        fecha: "21/08/1992",
+        regalo: "perfumes"
+        sexo: "m"
+        imagen:"rodrigo.png"
+      }
+    ]
+    </script>
+
+    <style>
+    html, body{
+      width: 100%;
+      height: 100;
+      margin: 0;
+      padding: 0;
+}
+.BirthdayCard{
+  width: 25vw;
+  height: 15vw;
+  margin: 2vw;
+
+  border: 1px solid;
+  border-radius: 1px;
+}
+.BirthdayCard > img{
+  width: 50%;
+  height: 100%;
+  float:left;
+}
+.middlewidth > h3{
+  text-align: center;
+  float:left;
+}
+.middlewidth > span{
+  width: 100%;
+  float:right;
+  text-align: right;
+  font-size: 0.9 rem;
+}
+.middlewidth{
+  float: left;
+  width:50% ;
+}
+.middlewidth > p{
+  margin-top:2rem;
+  float:left;
+
+}
+    </style>
+  </head>
+
+
+
+  <body>
+    <header>
+      <h1> </h1>
+      <hr>
+    </header>
+
+
+
+    <main>
+      <section id="ContenedorCumpleanos"></section>
+<script>
+var section = document.getElementById("Contenedorcumpleanos");
+
+for (var i = 0; i < nombres.length; i++) {
+ var personas = personas[i];
+ var imagen;
+if ( persona.sexo == "M")
+    imagen = "man.png"
+else
+  imagen = "woman.png";
+
+
+ section.innerHTML = "" +
+ '<div class="BirthdayCard">' +
+ '<img src="man.png" />'
+ '<div class="middlewidth">' +
+ '<h3>' + nombre + '</h3>' +
+  '<span>'+ fecha +'</span>' +
+  '<p>' + persona.regalo + '</p>'+
+
+'</div>'
+ '</div>';
+}
+</script>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+</html>
