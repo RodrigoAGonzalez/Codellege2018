@@ -15,91 +15,76 @@
       apellido: "Martin del Campo",
       fecha: "14/04/1995",
       regalo: "Le gusta el pastel de chocolate y regálenme Riot Point",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/man.jpg"
     },
     {
       nombre: "Rodrigo",
       apellido: "González",
       fecha: "21/08/1992",
       regalo: "Le gustan los perfumes y la joyeria (Eslavas, cadenas)",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/man.jpg"
     },
     {
       nombre: "Alejandro",
       apellido: "Torres",
       fecha: "26/04/2001",
       regalo: "Regálenle tarjetas de i-Tunas",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/int2.jpg"
     },
     {
       nombre: "Orlando",
       apellido: "Duarte",
       fecha: "31/08/1995",
       regalo: "Quiere mucha atencion y amoooor <3",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/int6.jpg"
     },
     {
       nombre: "Héctor",
       apellido: "Martinez",
       fecha: "19/02/1990",
       regalo: "Quiere un jersey de futbol, perfumes o relojes",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/int5.jpg"
+    },
+    {
+      nombre: "Emmanuel",
+      apellido: "Rodríguez",
+      fecha: "03/03/1994",
+      regalo: "Skins gratis en black desert",
+      sexo: "H",
+      imagen: "images/int4.jpg"
     },
     {
       nombre: "Hugo",
       apellido: "Montaño",
       fecha: "08/06/1987",
       regalo: "Pastel aleman y cosas de batman",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/int7.jpg"
     },
     {
       nombre: "Teresa",
       apellido: "Mata",
       fecha: "08/02/1992",
       regalo: "Le gustan los relojes y un gift card de saphora",
-      sexo: "M"
+      sexo: "M",
+      imagen: "images/int3.jpg"
     },
     {
       nombre: "Meme",
       apellido: "Rodríguez",
       fecha: "23/01/1998",
       regalo: "Un boleto de viaje a Europa",
-      sexo: "H"
+      sexo: "H",
+      imagen: "images/int1.jpg"
     }
   ];
 
-  var nombres = [
-    'Kevin Martin del Campo',
-    'Rodriguez González',
-    'Alejandro Torres',
-    'Orlando Duarte',
-    'Héctor Martinez',
-    'Hugo Montaño',
-    'Teresa Mata',
-    'Meme Rodríguez'
-  ];
 
-  var fechas = [
-    '14/04/1995',
-    '21/08/1992',
-    '26/04/2001',
-    '31/08/1995',
-    '19/02/1990',
-    '08/06/1987',
-    '08/02/1992',
-    '23/01/1998'
-  ];
-
-  var regalos = [
-    'Le gusta el pastel de chocolate y regálenme Riot Point',
-    'Le gustan los perfumes y la joyeria (Eslavas, cadenas)',
-    'Regálenle tarjetas de i-Tunas',
-    'Quiere mucha atencion y amoooor <3',
-    'Quiere un jersey de futbol, perfumes o relojes',
-    'Pastel aleman y cosas de batman',
-    'Le gustan los relojes y un gift card de saphora',
-    'Un boleto de viaje a Europa'
-  ];
 </script>
 
 <body>
@@ -119,37 +104,33 @@
     <script>
       var section = document.getElementById("ContenedorCumpleanos");
 
-      for (var i = 0; i < nombres.length; i++) {
+      for (var i = 0; i < personas.length; i++) {
         var persona = personas[i];
-        var nombre = nombres[i];
+        var nombre = persona.nombre;
+        var regalo = persona.regalo;
+        var fecha = persona.fecha;
+        var apellido = persona.apellido;
         var imagen;
-        if (persona.sexo == "H") {
-          imagen = "images/man.jpg";
-          section.innerHTML += '' +
-            '<div class="card">' +
-            '<a>' +
-            '<img class="card-img-top img-fluid img-thumbnail" src="images/man.jpg"' + persona.imagen + '/>' +
-            '</a>' +
-            '<div class="card-block">' +
-            '<h3 class="card-title">' + persona.nombre + " " + persona.apellido + '</h3>' +
-            '<span>' + persona.fecha + '</span>' +
-            '<p class="card-text">' + persona.regalo + '</p>' +
-            '</div>' +
-            '</div>';
-        } else {
-          imagen = "images/woman.jpg";
-          section.innerHTML += '' +
-            '<div class="card">' +
-            '<a>' +
-            '<img class="card-img-top img-fluid img-thumbnail" src="images/woman.jpg"' + persona.imagen + '/>' +
-            '</a>' +
-            '<div class="card-block">' +
-            '<h3 class="card-title">' + persona.nombre + " " + persona.apellido + '</h3>' +
-            '<span>' + persona.fecha + '</span>' +
-            '<p class="card-text">' + persona.regalo + '</p>' +
-            '</div>' +
-            '</div>';
+        if( personas[i].imagen != undefined )
+          imagen = personas[i].imagen;
+        else{
+          if( personas[i].sexo == "H" )
+            imagen = "images/man.jpg";
+          else
+            imagen = "images/woman.jpg";
         }
+
+        section.innerHTML += '' +
+          '<div class="card">' +
+          '<a>' +
+          '<img class="card-img-top img-fluid img-thumbnail" src="' + imagen + '"' + persona.imagen + '/>' +
+          '</a>' +
+          '<div class="card-block">' +
+          '<h3 class="card-title">' + nombre + " " + apellido + '</h3>' +
+          '<span>' + fecha + '</span>' +
+          '<p class="card-text">' + regalo + '</p>' +
+          '</div>' +
+          '</div>';
       }
     </script>
 
