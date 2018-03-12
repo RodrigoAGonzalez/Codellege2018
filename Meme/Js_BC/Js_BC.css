@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(44, 88, 221);
+  background-image: url(images/lol.gif);
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 36px;
+}
+.cont {
+  padding-top: 40px;
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: cover;
+  margin-top: 56%;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px -35px 172px 57px rgba(0,0,0,0.66);
+  padding-bottom: 16%;
+}
+.stick {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-left: thick solid rgb(19, 19, 19);
+  box-shadow: 0px 16px 22px 6px rgba(0,0,0,0.3);
+}
+.texto {
+  color: rgb(19, 19, 19);
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin-bottom: 5%;
+}
+.card {
+  margin: 2%;
+  float: left;
+  width: 15%;
+  box-shadow: 0px 16px 22px 6px rgba(0,0,0,0.3);
+  font-size: 26px;
+  font-family: 'Patrick Hand', cursive;
+}
+img {
+  float: left;
+  max-width: 100%;
+}
