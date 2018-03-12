@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pagina de Cumpleaños</title>
+    <script>
+    var personas =
+    [
+      {
+        nombre: "Kevin",
+        apellido: "Martin del Campo",
+        fecha: "14/04/1995",
+        regalo: "Le gusta el pastel de chocolate y reganlenle Riot Points",
+        sexo: "M"
+      },
+      {
+        nombre: "Rodrigo",
+        apellido: "Gonzalez",
+        fecha: "21/08/1992",
+        regalo: "Le gusta los perfumes y la joyeria (Esclavas, cadenas)",
+        sexo: "M"
+      },
+      {
+        nombre: "Alejandro",
+        apellido: "Torres",
+        fecha: "26/04/2001",
+        regalo: "Regalenle tarjetas de Ituna-s",
+        sexo: "M"
+      },
+      {
+        nombre: "Orlando",
+        apellido: "Duarte",
+        fecha: "31/08/1995",
+        regalo: "Quiere mucha atencion y amorrr <3",
+        sexo: "M"
+      },
+      {
+        nombre: "",
+        apellido: "",
+        fecha: "",
+        regalo: "",
+        sexo: ""
+      },
+      {
+        nombre: "",
+        apellido: "",
+        fecha: "",
+        regalo: "",
+        sexo: ""
+      },
+      {
+        nombre: "",
+        apellido: "",
+        fecha: "",
+        regalo: "",
+        sexo: ""
+      },
+      {
+        nombre: "",
+        apellido: "",
+        fecha: "",
+        regalo: "",
+        sexo: ""
+      },
+
+    ]
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
