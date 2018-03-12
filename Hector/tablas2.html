@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>document</title>
+ <script>
+
+     function CrearParrafo( parrafo){
+     var elemento = document.createElement('p');
+     document.body.appendChild(elemento);
+     elemento.innerHTML = parrafo;
+  }
+</script>
+
+</head>
+<body>
+   <script>
+     for (var i = 1; i < 10; i++){
+     for (var j = 1; j < 10; j++){
+       var multiplicacion= i * j;
+      CrearParrafo("la tabla de multiplicar del "+ i +" es: "+i+ "x" + j + "=" + multiplicacion);
+       }
+   }
+</script>
+
+
+</body>
+</httml>
