@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+  <link rel="stylesheet" href="Js_BC.css" type="text/css">
+  <title>Js Birthday Codellege</title>
+</head>
+<script>
+  var personas = [{
+      nombre: "Kevin",
+      apellido: "Martin del Campo",
+      fecha: "14/04/1995",
+      regalo: "Le gusta el pastel de chocolate y regálenme Riot Point",
+      sexo: "H"
+    },
+    {
+      nombre: "Rodrigo",
+      apellido: "González",
+      fecha: "21/08/1992",
+      regalo: "Le gustan los perfumes y la joyeria (Eslavas, cadenas)",
+      sexo: "H"
+    },
+    {
+      nombre: "Alejandro",
+      apellido: "Torres",
+      fecha: "26/04/2001",
+      regalo: "Regálenle tarjetas de i-Tunas",
+      sexo: "H"
+    },
+    {
+      nombre: "Orlando",
+      apellido: "Duarte",
+      fecha: "31/08/1995",
+      regalo: "Quiere mucha atencion y amoooor <3",
+      sexo: "H"
+    },
+    {
+      nombre: "Héctor",
+      apellido: "Martinez",
+      fecha: "19/02/1990",
+      regalo: "Quiere un jersey de futbol, perfumes o relojes",
+      sexo: "H"
+    },
+    {
+      nombre: "Hugo",
+      apellido: "Montaño",
+      fecha: "08/06/1987",
+      regalo: "Pastel aleman y cosas de batman",
+      sexo: "H"
+    },
+    {
+      nombre: "Teresa",
+      apellido: "Mata",
+      fecha: "08/02/1992",
+      regalo: "Le gustan los relojes y un gift card de saphora",
+      sexo: "M"
+    },
+    {
+      nombre: "Meme",
+      apellido: "Rodríguez",
+      fecha: "23/01/1998",
+      regalo: "Un boleto de viaje a Europa",
+      sexo: "H"
+    }
+  ];
+
+  var nombres = [
+    'Kevin Martin del Campo',
+    'Rodriguez González',
+    'Alejandro Torres',
+    'Orlando Duarte',
+    'Héctor Martinez',
+    'Hugo Montaño',
+    'Teresa Mata',
+    'Meme Rodríguez'
+  ];
+
+  var fechas = [
+    '14/04/1995',
+    '21/08/1992',
+    '26/04/2001',
+    '31/08/1995',
+    '19/02/1990',
+    '08/06/1987',
+    '08/02/1992',
+    '23/01/1998'
+  ];
+
+  var regalos = [
+    'Le gusta el pastel de chocolate y regálenme Riot Point',
+    'Le gustan los perfumes y la joyeria (Eslavas, cadenas)',
+    'Regálenle tarjetas de i-Tunas',
+    'Quiere mucha atencion y amoooor <3',
+    'Quiere un jersey de futbol, perfumes o relojes',
+    'Pastel aleman y cosas de batman',
+    'Le gustan los relojes y un gift card de saphora',
+    'Un boleto de viaje a Europa'
+  ];
+</script>
+
+<body>
+
+  <main class="container-fluid cont">
+    <section class="container-fluid">
+      <div class="texto">
+        <div class="stick">
+          <h1 class="container-fluid">&lt;/C O D E L L E G E&gt;</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="ContenedorCumpleanos">
+    </section>
+
+    <script>
+      var section = document.getElementById("ContenedorCumpleanos");
+
+      for (var i = 0; i < nombres.length; i++) {
+        var persona = personas[i];
+        var nombre = nombres[i];
+        var imagen;
+        if (persona.sexo == "H") {
+          imagen = "images/man.jpg";
+          section.innerHTML += '' +
+            '<div class="card">' +
+            '<a>' +
+            '<img class="card-img-top img-fluid img-thumbnail" src="images/man.jpg"' + persona.imagen + '/>' +
+            '</a>' +
+            '<div class="card-block">' +
+            '<h3 class="card-title">' + persona.nombre + " " + persona.apellido + '</h3>' +
+            '<span>' + persona.fecha + '</span>' +
+            '<p class="card-text">' + persona.regalo + '</p>' +
+            '</div>' +
+            '</div>';
+        } else {
+          imagen = "images/woman.jpg";
+          section.innerHTML += '' +
+            '<div class="card">' +
+            '<a>' +
+            '<img class="card-img-top img-fluid img-thumbnail" src="images/woman.jpg"' + persona.imagen + '/>' +
+            '</a>' +
+            '<div class="card-block">' +
+            '<h3 class="card-title">' + persona.nombre + " " + persona.apellido + '</h3>' +
+            '<span>' + persona.fecha + '</span>' +
+            '<p class="card-text">' + persona.regalo + '</p>' +
+            '</div>' +
+            '</div>';
+        }
+      }
+    </script>
+
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>
