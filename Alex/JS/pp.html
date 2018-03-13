@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<ul>
+  <li>A. Emmanuel</li>
+  <li>B. Meme</li>
+  <li>C. Alex</li>
+  <li>D. Hugo</li>
+  <li>E. Hector</li>
+  <li>F. Elena</li>
+  <li>G. Teresa</li>
+  <li>H. Orlando</li>
+  <li>I. Kevin</li>
+  <li>J. Rodrigo</li>
+</ul>
+<br />
+<input type="text" id="seleccion" />
+<button onclick="EjecutarAccion();">Ejecutar</button>
+<script>
+  function EjecutarAccion()
+  {
+    var seleccion = document.getElementById('seleccion').value;
+    switch( seleccion )
+    {
+      case "A":
+      case "a":
+      alert("Emmanuel ha sido seleccionado!");
+      break;
+      case "B":
+      case "b":
+      alert("Meme ha sido seleccionado");
+      break;
+      case "C":
+      case "c":
+      alert("Alex ha sido seleccionado");
+      break;
+      case "D":
+      case "d":
+      alert("Hugo ha sido seleccionado");
+      break;
+      case "E":
+      case "e":
+      alert("Hector ha sido seleccionado");
+      break;
+      case "F":
+      case "f":
+      alert("Elena ha sido seleccionada");
+      break;
+      case "G":
+      case "g":
+      alert("Teresa ha sido seleccionada");
+      break;
+      case "H":
+      case "h":
+      alert("Orlando ha sido seleccionado");
+      break;
+      case "I":
+      case "i":
+      alert("Kevin ha sido seleccionado");
+      break;
+      case "J":
+      case "j":
+      alert("Rodrigo ha sido seleccionado");
+      break;
+      default:
+      alert("Opcion no valida");
+      break;
+    }
+  }
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script>
+    document.getElementById("prueba").innerHTML =
+  </script>
+  <body>
+    <header>
+
+    </header>
+
+   <main>
+     <div>
+       <p>
+         Esto es un parrafo
+       </p>
+       <input type="button" onclick="" value="click me!"/>
+     </div>
+   </main>
+
+   <footer>
+
+   </footer>
+  </body>
+</html>

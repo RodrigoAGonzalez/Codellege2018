@@ -8,11 +8,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
-div.card {max-width: 45%;
-border: 1px solid peru;
+div.card {width: 40%;
+border: 2px solid peru;
 }
 img {max-width: 150px;}
-div.card:hover div {background-color:lightblue; font-size: 110%; display: block;}
+div.card:hover div {background-color:lightblue; font-size: 100%; display: block;}
 </style>
   </head>
   <body>
@@ -59,6 +59,7 @@ var persona =
     fecha: "14/04/1995",
     regalo: "Le gusta el pastel de chocolate y reganlenle Riot Points",
     sexo: "M"
+    /*imagen: "Imagenes/Meme.jpg"*/
   },
   {
     nombre: "Rodrigo ",
@@ -114,21 +115,14 @@ var persona =
 var section = document.getElementById("Cumples")
 for (var i = 0; i < persona.length; i++){
   section.innerHTML +=
-  '<div class="card">' + '<img class="card-img-top" src="imagenes/ballon.jpg" ' + persona[i].imagen + '/>' + '<div class="card-body">' + '<h3 class="card-title">' + persona[i].nombre +
+  '<div class="card" style="float:left;">' + '<img class="card-img-top" src="imagenes/ballon.jpg" ' + persona[i].imagen + '/>' + '<div class="card-body">' + '<h3 class="card-title">' + persona[i].nombre +
      "" + persona[i].apellido + '</h3>' + '<span>' + persona[i].fecha + '</span>' + '<p class="card-text">' +
        persona[i].regalo + '</p>' + '<p ="card-text">' + persona[i].sexo + '</p>' + '</div>' + '</div>';
 }
 </script>
 
 </section>
-<div class="card" style="width:400px">
-  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-  <div class="card-body">
-    <h4 class="card-title"></h4>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary"></a>
-  </div>
-</div>
+
 
     </main>
     <footer>
