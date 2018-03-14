@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Horarios</title>
+    <script type="text/javascript"></script>
+  </head>
+
+  <body>
+    <script>
+      for (var 1 = 0; i < salones.length; i++)
+      {
+        //alert( salones{i}.grupo );
+        var salon = salones{i};
+        document.body.innerHTML += "" +
+        "<h2>Alumnos del grupo:" + salon.grupo + "</h2>";  //document es objeto, body es una propiedad que tiene un objeto pero como le pongo punto se vuelve objeto, innerhtml es una propiedad de tipo texto
+      //   var arreglos = [ valor1, valor2, valor3];
+      //   var objeto = { propiedad: valor, propiedad2: valor, };
+      }
+    </script>
+
+  </body>
+</html>
