@@ -8,62 +8,48 @@
 
   <script>
 
-  var salonA=
-  {
+var salon1 = {
+  grupo = "1a"
+  alumnos:
+  [
+    {
+      nombre: "alex",
+      apellido: "me voy temprano",
+      edad: 16,
+      semestre: 1,
+      matricula: 12120001,
+      materias: ["CLMAT1", "CLESP1", "CLCOMP1"],
+    },
+    {
+      nombre: "Emanuel",
+      apellido: "Rodriguez",
+      edad: 22,
+      semestre: 4,
+      matricula: 12120001,
+      materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
+    },
+    {
+      nombre: "Orlando",
+      apellido: "Salinas",
+      edad: 22,
+      semestre: 4,
+      matricula: 12120001,
+      materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
+    },
+    {
+      nombre: "meme",
+      apellido: "el dios",
+      edad: 18,
+      semestre: 4,
+      matricula: 12120001,
+      materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
+    },
+  ]
 
-    alumnos:
-    [
-      {
-        nombre: "alex",
-        apellido: "me voy temprano",
-        edad: 16,
-        semestre: 1,
-        matricula: 12120001,
-        materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
-      },
-      {
-        nombre: "Emanuel",
-        apellido: "Rodriguez",
-        edad: 22,
-        semestre: 4,
-        matricula: 12120001,
-        materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
-      },
-      {
-        nombre: "Orlando",
-        apellido: "Salinas",
-        edad: 22,
-        semestre: 4,
-        matricula: 12120001,
-        materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
-      },
-      {
-        nombre: "meme",
-        apellido: "el dios",
-        edad: 18,
-        semestre: 4,
-        matricula: 12120001,
-        materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
-      },
-    ]
-
-  };
-  var salonB=
-  {
-    alumnos:
-    [
-      {
-        nombre: "alex",
-        apellido: "me voy temprano",
-        edad: 16,
-        semestre: 1,
-        matricula: 12120001,
-        materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
-      },
-
-  }
-  var salonC=
+};
+var salon2=
 {
+  alumnos:
   [
     {
       nombre: "alex",
@@ -73,52 +59,107 @@
       matricula: 12120001,
       materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
     },
-  ]
+
 }
-  var materias=
+var salon3=
 {
- [
-    {
-    nombres: "matematicas"
-    clave: "CLMAT1",
-    maestro: ["stk123", "stl124"]
+[
+  {
+    nombre: "alex",
+    apellido: "me voy temprano",
+    edad: 16,
+    semestre: 1,
+    matricula: 12120001,
+    materias: ["CLMAT1", "CLESP1", "CLCOMP1"]
+  },
+]
+}
+var salones= [salon1,salon2,salon3]
+{
+  [
+  {
 
-    };
-    {
-    nombres: "español"
-    clave: "CLESP1",
-    maestro: ["stk123", "stl124"]
-    };
-    {
-    nombres: "historia"
-    clave: "CLHIS1",
-    maestro: ["stk123", "stl124"]
-    };
-    {
-    nombres: "ciencia"
-    clave: "CLCIE1",
-    maestro: ["stk123", "stl124"]
-    };
+
+  }
   ]
 }
-  var maestros =
-  [
-    {
-      nombre:"kevin"
-      apellido: "Martin del Campo"
-      Edad: 22,
-      clave: "STK123"
-    }
-  ]
-  var alumno = salon.alumnos(0);
-  var mate1 = alex.materias(0);
-  var mate1 = salon.alumnos(0).materias(0);
-  var claveMat1 = materias(0).clave;
+var materias=
+{
+[
+  {
+  nombres: "matematicas"
+  clave: "CLMAT1",
+  maestro: ["stk123", "stl124"]
+
+  };
+  {
+  nombres: "español"
+  clave: "CLESP1",
+  maestro: ["stk123", "stl124"]
+  };
+  {
+  nombres: "historia"
+  clave: "CLHIS1",
+  maestro: ["stk123", "stl124"]
+  };
+  {
+  nombres: "ciencia"
+  clave: "CLCIE1",
+  maestro: ["stk123", "stl124"]
+  };
+]
+}
+var maestros =
+[
+  {
+    nombre:"kevin"
+    apellido: "Martin del Campo"
+    Edad: 22,
+    clave: "STK123"
+  }
+  {
+    nombre:"rodrigo"
+    apellido: "Martin del Campo"
+    Edad: 30,
+    clave: "STK123"
+  }
   </script>
-
-
   </head>
   <body>
+
+<h2>alumnos del grupo: 1a </h2>
+<span>kevin martin del campo</span>
+<script>
+for (var i = 0; i < salones.length; i++) {
+  var salon = salones[i];
+
+document.body.innerHTML += "" + // document es un objeto, body es una propiedad por punto se hace un objeto,inner html es una propiedad, todo lo que esta antes de un punto es un objeto
+
+"<h2> Alumnos del grupo:" + salon.grupo + "</h2>";
+
+var alumnos = salon.alumnos;
+for( var j=0; j < alumnos.length; j++ ) //no poner mismas variables en otros fors (en este caso no podemos poner var I dentro del for)
+ {
+  document.body.innerHTML += "" +
+  "<span style = 'display block;'>" + alumnos[j].nombre + " " + alumnos[j].apellido + "</span>";
+
+  for( var k=0; k < alumnos[j].materias.length; k++)
+  {
+    for( var l=0;l < materias.length; l++)
+    {
+      if( condicion )
+    }
+  }
+ }
+}
+
+
+
+
+// var arreglo= [valor1,valor2,valor3];
+// var objeto= {propiedad:valor, propiedad2: valor,}; no lleva numeros al principio
+// si es de arreglo, for de ahuevo
+      </script>
 
   </body>
 </html>
