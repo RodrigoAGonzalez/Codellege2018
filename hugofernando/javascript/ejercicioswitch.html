@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>switch</title>
+  </head>
+  <body>
+
+    <p id="demo"> aqui va el texto </p>
+    <button type="button" name="button" onclick="cambiartexto();"> boton </button>
+
+    <script type="text/javascript">
+    function cambiartexto(){
+      var x = "hola";
+      var y = "chao";
+      var parrafo = document.getElementById("demo").innerHTML;
+
+      switch (parrafo) {
+        case "hola":
+        document.getElementById("demo").innerHTML = x;
+          break;
+
+          case y:
+          document.getElementById("demo").innerHTML = x;
+            break;
+          
+        default:
+        document.getElementById("demo").innerHTML =;
+
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
