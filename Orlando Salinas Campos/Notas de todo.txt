@@ -1,0 +1,149 @@
+Conceptos basicos HTML
+	*que es una etiqueta
+		-un elemento
+
+	*mencione que va dentro de las etiquetas
+		-contenido
+	*mencione que puede ir dentro de la etiqueta antes del cierre de esta
+		-atributos(class, style, type, id, name, onclick, value)
+		Ejemplos: <ETIQUETA atributo />
+
+	* como se asigna los atributos de una etiqueta?
+		- ATRIBUTO="valor"
+		Ejemplo: <input type="text" />
+	*Escriba la etiqueta CODELLEGE con el atributo horario que tenga el valor 8:30, el atributo sala que tenga el valor de linares y profesor que tenga el valor Rodrigo,Kevin
+		-> <CODELLEGE horario="8:30 A.M sala="Linares" profesor="Rodrigo,Kevin"></CODELLEGE>
+
+	*que tipos de etiqueta existen?
+	-Doble etiqueta: <div> contenido </div>
+	-Etiqueta individual: <input type="text" /> o <input type="text">
+	-Etiqueta mixtas: <li>valor</li> o <li>valor
+	
+	*Que es una pagina web?
+		-Es un conjunto de etiquetas
+	
+	*Describe la estructura basica de HTML
+	<!DOCTYPE html> //opcional, define el tipo de documento (por default HTML 5)
+	<html>
+  	<head>
+	</head>
+	<meta charset="utf-8">
+	<body>
+	</body>
+	</html>
+	
+	*Describe todas las etiquetas que pueda(incluya su comportamiento por defecto)
+		<div>: division, tiene un display de bloque, toma el 100% de width. no tiene height,crece con su contenido
+		<nav>: Navegacion, continene una lista. tiene display block, por lo que tiene width del 100%, similar al div.
+		<meta>: Define propiedades globales de la pagina (charset, viewports, compatibiladades)
+		<link>: Importa (CSS, librerias JS, Fuentes, Multimedia, Framework, etc.)
+		<body>: Cuerpo de pagina, todo el contenido de la pagina
+		<section>: una seccion. Igual al div. (HTML 5)
+		<header>: la parte principal del body. igual al div (HTML 5)
+		<footer>: la parte final (pie de pagina). Igual al div (HTML 5)
+		<html>: define que la pagina es un documento HTML
+		<p>: Es un parrafo de texto, igual que el div pero incluye margenes y padding.
+		<span>: Es una linea o palabra. Tiene display inline-block. No tiene width ni height pero tienes margenes
+		<br>: salto de linea
+		<a>: Es una referencia a un enlace/link (Hipervinculo). Igual al span pero sin margenes, cursor pointer y texto de color y subrayado
+		<img>: Es una etiqueta que contiene una imagen. Igual al span sin margenes
+		<ul>:Lista no ordenada. Igual al div pero con margenes
+		<ol>:Lista ordenada. igual al div pero con margenes y numera/ordenado los elementos
+		<li>: Elemento de la lista (ol o ul)
+		<table>: crea una tabla. Igual que el div con margenes y padding
+		
+Conceptos basicos de CSS
+	*Que significa CSS
+		-Cascading style sheet (hoja de estilos en cascada)
+	*Porque se le dice "en cascada"
+		-va en orden (Arriba hacia abajo)
+	*Que es una regla de CSS
+		-Conjunto de propiedades definidas para un identificador	-
+	*Que es un selector
+		-Identifica a un elemento
+	*Como se define una clase
+		-> .Clase, .Clase-algo, .Clase1
+	*Como se pone el selector para ID' s
+		-> Mid
+	* Que es un nodo
+		-> padre (Nodo) -> Hijo (Nodo)	
+
+	*Mencione selectores de nodos
+		-Seleccionar todos los nodos iguales:
+			- Selector, Selector Otroselector, .Clase, .Clase otro selector, #ID, #ID otro selector
+			Ejemplo: p{}, div p{}, .clase{}, .clase SELECTOR{}, #ID{}, #ID selector{}
+		-Seleccionar nodo siguiente:
+			- SELECTOR > SELECTOR
+			Ejemplo: div > p {}
+			<div> <img/> <p><span></p> <p></p> </div>
+	*Mencione pseudo-clases
+		-selector:hover -> mouse encima
+		-selector:link -> Para un <a> (cuando no ha sido visitado)
+		-selector:visited -> Para <a> ya visitado (cuando se pone morado el link)
+		-selector:active -> Elemento activo (solo los que interactua)
+		-selector:first-child -> Selecciona el primer elemento de este tipo de selector
+			<ul>
+				<li>A
+				<li>B	
+				<li>C
+			</ul>	
+		ul lu:first.child{} //toma al primer elemento del tipo li, osea, <li>A
+		-selector:last child-> Selecciona el ultimo elemento de este tipo de selector
+			<ul>
+				<li>A
+				<li>B	
+				<li>C
+			</ul>
+		ul li:first.child{} //toma al ultimo elemento del tipo li, osea, <li>C
+		-selector:nth-child-( x ) //Toma al x elemento de este tipo de selector 
+			<ul>
+				<li>A
+				<li>B	
+				<li>C
+				<li>D
+				<li>E
+			</ul>
+		ul li:nth-child(2) //Toma el elemento 2 del tipo li, osea, <li> B
+
+	*Define una regla para todos los <p> dentro de un <div> que esta en una seccion con la clase "principal"
+		-> .Principal div p{}
+	* Que es una propiedad en CSS
+		-Es una propiedad de estilo del elemento
+		Ejemplo:
+			-max-width: 50%;
+			-text-align: center ;
+	*Crear una regla para el primer <span> dentro de un parrafo con clase "descripcion" que se ecuentra en un div dentro del primer articulo de una 		seccion con ID "inicio"
+		#inicio > article >div > .descripcion > span {
+		}
+	*A la regla anterior, aplicar el estilo de negritas, colo de texto gris oscuro, tamaño de fuente de 1 y medio de la fuente del navegador, borde 	inferior de 1 pixel color azul
+		#Inicio > article div .descripcion >span {
+			font-weight:bold;
+			color: #888888;
+			font-size: 1.5rem;
+			border-bottom: 1px solid blue;
+		}
+		
+	*Describe cada diferencia entre Margin, Padding y Border
+		-Border: esta en las orillas del elemento, se dibuja y es visible al usuario
+		-Margin:  lo separa en las orillas, pero NO es las orilla
+		-Padding: Esta dentro del elemento, no es visible y es el espaciado de las orillas hacia dentro
+
+	*Describe los comportamientos de los tipos de display
+		-block: width de 100%, No tiene alturo
+		-inline-block: En la misma linea, tiene un pequeño margen. se usa para palabras o texto en linea 
+		-table: Crea una tabla en el elemento padre y se autoajusta a su contenido
+		-table-cell: Hace que un elemento sea una celda de una tabla (se autoajusta). habilita la propiedad vertical-align
+		-table-row: Hace que un elemento sea un renglon de una tabla (se autoajusta). 
+		-inline: Igual que el inline-block. Solo en la misma linea, o puede cambiar la altura y ancho (no sirve mucho)
+
+	*Describe los tipos de posocionamiento
+		-absolute: Posiciona el elemento encima de todos los demas, el left:0, top:0 del padre
+		-relative: Acomoda los elementos relativamente a sus display, habilita la posicion absolute de un elemento. Body es la etiqueta con 			position relative por defecto. (hay que poner relative a la tele para una pagina pueda estar donde mismo con el absolute)
+		-fixed: Deja un elemento fijo en esa posicion (para cuando dejas una imagen y haces scroll y no se mueve).
+		
+	
+		
+
+
+	
+	

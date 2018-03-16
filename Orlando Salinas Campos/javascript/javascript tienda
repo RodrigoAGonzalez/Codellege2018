@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var tienda = {
+      productos
+      [
+        {
+      nombre: "huevos"
+      precio: 15
+      clave:5551
+      tipo:"comida"
+      departamento: ["Comida"],
+        },
+        {
+      nombre: "papitas"
+      precio: 20
+      clave:5552
+      tipo:"comida"
+      departamento: ["Comida", "chatarra"],
+        },
+        {
+      nombre: "soda"
+      precio: 28
+      clave:5553
+      tipo:"loquidos"
+      departamento:["loquidos"],
+        },
+        {
+      nombre: "tortillas"
+      precio: 10
+      clave:5554
+      tipo:"comida"
+      departamento: ["Comida", "chatarra"],
+        },
+        {
+      nombre: "cacahuates"
+      precio: 5
+      clave:5555
+      tipo:"comida"
+      departamento: ["Comida", "chatarra"],
+        },
+        {
+      nombre: "galletas"
+      precio: 11
+      clave:5556
+      tipo:"comida"
+      departamento: ["Comida", "chatarra"],
+        },
+        {
+      nombre: "carne"
+      precio: 18
+      clave:5557
+      tipo:"comida"
+      departamento: ["Comida"],
+        },
+        {
+      nombre: "pollo"
+      precio: 18
+      clave:5558
+      tipo:"comida"
+      departamento: ["Comida"],
+        },
+        {
+      nombre: "cereal"
+      precio: 21
+      clave:5559
+      tipo:"comida"
+      departamento: ["Comida", "desayunos"],
+        },
+        {
+      nombre: "mermelada"
+      precio: 23
+      clave:5560
+      tipo:"comida"
+      departamento: ["Comida", "desayuno"],
+        },
+      ]
+    };
+
+    var direccion = {
+      [
+        {
+      calle: "Hercules"
+      numero: 741,
+      colonia: "ciudad ideal"
+      articulos: [ 1,2,3,4,5,6,7,8,9]
+      }
+      {
+      calle: "Scouts"
+      numero: 500,
+      colonia: "ciudad ideal"
+      articulos: [ 1,2,3,4,5,6,7,8,9]
+     }
+     {
+       calle: "Virgo"
+       numero: 200,
+       colonia: "ciudad ideal"
+       articulos: [ 9,8,7,6,5,4,3,2,1]
+    }
+    ]
+    }
+    </script>
+  </head>
+  <body>
+
+
+<script>
+
+  document.body.innerHTML+= '<h1>sucursales de la tienda"' + carnitaAsada.nombre + '"</h1>';
+  for (i = 0; i<carnitaAsada.sucursales.length; i++){
+var colonia = carnitaAsada.sucursales[i].colonia;
+var precio = carnitaAsada.sucursales[i].precio;
+var clave = carnitaAsada.sucursales[i].clave;
+var nombre = carnitaAsada.sucursales[i].nombre;
+var articulos = carnitaAsada.sucursales[i].articulos;
+
+
+document.body.innerHTML += '<h3>Sucursal:' + nombre + "<br/>" + "&nbsp; &nbsp;&nbs;calle"'</h3>';
+ + calle + "<br/>" + "&nbsp; &nbsp;&nbs;numero:" + numero + "<br/>" + "&nbsp; &nbsp;&nbs;colonia"
+ + colonia + '</h3>'
+
+for (var b = 0; b<carnitaAsada.sucursales[i].articulos.length;b++){
+var clave = carnitaAsada.sucursales[i].articulos[b];
+//document.body.innerHTML += "<h3>Articulos:" + articulos +   "</h3>";
+for (var c = 0; c<productos.length;c++){
+  if (clave == productos[c].clave)
+{
+var producto = productos.[c];
+document.body.innerHTML += '<h3>articulo:' + producto.nombre +',$'+ producto.precio + '</h3>';
+
+      }
+    }
+  }
+}
+</script>
+
+
+
+  </body>
+</html>
