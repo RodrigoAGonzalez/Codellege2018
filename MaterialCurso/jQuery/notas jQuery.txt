@@ -1,0 +1,33 @@
+JS_______________________________________________________
+var elemento = document.getElementById("algo");
+JQ_______________________________________________________
+var elemento = $("#algo");
+
+
+JS_______________________________________________________
+elemento.innerHTML -> <p>INNERHTML</p>
+JQ_______________________________________________________
+elemento.html()    -> <p>INNERHTML</p>
+elemento.html( "VALOR" ) -> elemento.innerHTML = "VALOR";
+
+
+<a id="algo" href="http://www.google.com">GOOGLE!</a>
+JS_______________________________________________________
+elemento.getAttribute( "href" )
+elemento.setAttribute( "href", "http://www.google.com" );
+JQ_______________________________________________________
+elemento.attr( "href" ) -> Regresa el valor del atributo
+elemento.attr( "href", "VALOR" );
+
+JS_______________________________________________________
+elemento.style.borderColor; -> "white" (border-color: white)
+elemento.style.borderColor = "red";
+JQ_______________________________________________________
+myLink.css( "border-color" );
+
+<p id="algo"></p>
+
+Concatenar: Unir texto. Es la operaión de suma con tipos de dato String.
+"hola" + " " + "mundo" = "hola mundo"
+
+$('a').html( $('a').html() + " Yahoo!" );

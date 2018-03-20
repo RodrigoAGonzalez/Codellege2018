@@ -1,0 +1,2 @@
+https://www.htmlgoodies.com/html5/css/a-guide-to-using-css-variables.html
+https://medium.freecodecamp.org/everything-you-need-to-know-about-css-variables-c74d922ea855
