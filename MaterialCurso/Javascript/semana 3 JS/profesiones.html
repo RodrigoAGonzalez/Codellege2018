@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> Profesiones </title>
+  <style>
+    label
+    {
+      display: block;
+    }
+  </style>
+  <script>
+
+    function Filtrar()
+    {
+      var container = document.getElementById( 'personas' );
+      var sexo = document.getElementById('sexo').value.toUpperCase();
+      var claveProfesion = document.getElementById('profesion').value;
+      var claveCiudad = document.getElementById('ciudad').value.toUpperCase();
+
+      container.innerHTML = "";
+
+      for( var i = 0; i < juego.personas.length; i++ )
+      {
+        var persona = juego.personas[i];
+        if( persona.sexo == sexo )
+          for( var j = 0; j < persona.profesion.length; j++ )
+            if( persona.profesion[j] == claveProfesion )
+              for( k = 0; k < profesiones.length; k++ )
+              {
+                if( profesiones[k].clave == claveProfesion )
+                  for( var l = 0; l < profesiones[k].ciudades.length; l++ )
+                    if( claveCiudad == profesiones[k].ciudades[l] )
+                    {
+                      for( var m = 0; m < ciudades.length; m++ )
+                      {
+                        if( ciudades[m].clave == claveCiudad )
+                          container.innerHTML += "" +
+                          "<p>" +
+                            "<label>" +
+                              "Nombre Completo: " + persona.nombre + " " + persona.apellido +
+                            "</label>" +
+                            "<label>" +
+                              "Edad: " + persona.edad +
+                            "</label>" +
+                            "<label>" +
+                              "Profesion: " + profesiones[k].nombre +
+                            "</label>" +
+                            "<label>" +
+                              "Ciudad: " + ciudades[m].nombre +
+                            "</label>" +
+                          "</p>"; 
+                      }
+                      break;
+                    }
+              }
+      }
+
+    }
+
+    function FiltrarPorSexo()
+    {
+      var container = document.getElementById( 'personas' );
+      var filtro = document.getElementById( 'sexo' ).value.toUpperCase();
+
+      if( filtro == 'M' || filtro == 'F' )
+      {
+        container.innerHTML = "";
+        for( var i = 0; i < juego.personas.length; i++ )
+        {
+          var persona = juego.personas[i];
+          if( persona.sexo == filtro )
+            container.innerHTML += "" +
+              "<p>" +
+                "<label>" +
+                  "Nombre Completo: " + persona.nombre + " " + persona.apellido +
+                "</label>" +
+                "<label>" +
+                  "Edad: " + persona.edad +
+                "</label>" +
+                "<label>" +
+                  "Sexo: " + persona.sexo +
+                "</label>" +
+              "</p>";
+        }
+      }
+      else
+        container.innerHTML = "<h2>Error: No existe el sexo ['" + filtro + "'] para personas</h2>";
+    }
+
+    function FiltrarPorProfesion()
+    {
+      var container = document.getElementById( 'personas' );
+      var clave = document.getElementById('profesion').value;
+      container.innerHTML = "";
+
+      for( var i = 0; i < juego.personas.length; i++ )
+      {
+        var persona = juego.personas[i];
+        for( var j = 0; j < persona.profesion.length; j++ )
+          if( persona.profesion[j] == clave )
+            for( var k = 0; k < profesiones.length; k++ )
+            {
+              if( profesiones[k].clave == clave )
+              {
+                var profesion = profesiones[k];
+                container.innerHTML += "" +
+                "<p>" +
+                  "<label>" +
+                    "Nombre Completo: " + persona.nombre + " " + persona.apellido +
+                  "</label>" +
+                  "<label>" +
+                    "Edad: " + persona.edad +
+                  "</label>" +
+                  "<label>" +
+                    "Profesion: " + profesion.nombre +
+                  "</label>" +
+                "</p>";
+              }
+            }
+      }
+    }
+
+    function FiltrarPorCiudad()
+    {
+      var container = document.getElementById( 'personas' );
+      var clave = document.getElementById('ciudad').value;
+      container.innerHTML = "";
+
+      for( var i = 0; i < juego.personas.length; i++ )
+      {
+        var persona = juego.personas[i];
+        for( var j = 0; j < persona.profesion.length; j++ )
+          for( var k = 0; k < profesiones.length; k++ )
+            if( persona.profesion[j] == profesiones[k].clave )
+            {
+              var profesion = profesiones[k];
+              for( var l = 0; l < profesion.ciudades.length; l++ )
+                if( profesion.ciudades[l] == clave )
+                {
+                  for( var m = 0; m < ciudades.length; m++ )
+                    if( profesion.ciudades[l] == ciudades[m].clave )
+                    {
+                      container.innerHTML += "" +
+                      "<p>" +
+                        "<label>" +
+                          "Nombre Completo: " + persona.nombre + " " + persona.apellido +
+                        "</label>" +
+                        "<label>" +
+                          "Edad: " + persona.edad +
+                        "</label>" +
+                        "<label>" +
+                          "Profesion: " + profesion.nombre +
+                        "</label>" +
+                        "<label>" +
+                          "Ciudad: " + ciudades[m].nombre +
+                        "</label>" +
+                      "</p>";  
+                      break;
+                    }
+                }         
+            }
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    var personas = [
+      {
+        nombre: "kevin",
+        apellido: "del campo",
+        edad: 22,
+        sexo: "M",
+        profesion: [1, 5, 2]
+      },
+
+      {
+        nombre: "rodrigo",
+        apellido: "gonzalez",
+        edad: 24,
+        sexo: "M",
+        profesion: [1]
+      },
+
+      {
+        nombre: "hugo",
+        apellido: "rock",
+        edad: 30,
+        sexo: "M",
+        profesion: [1]
+      },
+
+      {
+        nombre: "orlando",
+        apellido: "salinas",
+        edad: 22,
+        sexo: "M",
+        profesion: [3]
+      },
+
+      {
+        nombre: "orlando",
+        apellido: "salinas",
+        edad: 22,
+        sexo: "M",
+        profesion: [3]
+      },
+
+      {
+        nombre: "emmanuel",
+        apellido: "rodriguez",
+        edad: 21,
+        sexo: "M",
+        profesion: [5]
+      },
+
+      {
+        nombre: "alejandro",
+        apellido: "torres",
+        edad: 16,
+        sexo: "M",
+        profesion: [5]
+      },
+
+      {
+        nombre: "hector",
+        apellido: "martinez",
+        edad: 26,
+        sexo: "M",
+        profesion: [4]
+      },
+
+      {
+        nombre: "orlando",
+        apellido: "salinas",
+        edad: 22,
+        sexo: "M",
+        profesion: [3]
+      },
+
+      {
+        nombre: "manuel",
+        apellido: "rodriguez",
+        edad: 23,
+        sexo: "M",
+        profesion: [5]
+      },
+
+      {
+        nombre: "teresa",
+        apellido: "mata",
+        edad: 26,
+        sexo: "F",
+        profesion: [2]
+      },
+
+      {
+        nombre: "elena",
+        apellido: "latourniere",
+        edad: 24,
+        sexo: "F",
+        profesion: [5]
+      },
+    ];
+
+    var profesiones = [{
+        nombre: "ingenieria en sistemas computacionales",
+        clave: 1,
+        ciudades: ["MTY", "INY", "BER"]
+      },
+
+      {
+        nombre: "ingenieria en administrador de sistemas",
+        clave: 2,
+        ciudades: ["INY"]
+      },
+
+      {
+        nombre: "tecnico en redes",
+        clave: 3,
+        ciudades: ["BER"]
+      },
+
+      {
+        nombre: "ejecutivo en ventas",
+        clave: 4,
+        ciudades: ["MTY"]
+      },
+
+      {
+        nombre: "todologo",
+        clave: 5,
+        ciudades: ["MTY", "BER"]
+      }
+    ];
+
+    var ciudades = [
+    {
+      nombre: "monterrey",
+      pais: "mexico",
+      clave: "MTY"
+    },
+
+    {
+      nombre: "berlin",
+      pais: "alemania",
+      clave: "BER"
+    },
+
+    {
+      nombre: "nueva york",
+      pais: "estados unidos",
+      clave: "INY"
+    }
+    ];
+
+    var juego = 
+    {
+      nombre: "No hice la tarea :C",
+      personas: personas
+    };
+  </script>
+
+</head>
+
+<body>
+    <label>Buscar por sexo</label>
+    <br>
+    <input type="text" id="sexo" />
+    <button onclick="FiltrarPorSexo()">Buscar</button>
+    
+    <br>
+    
+    <label>Buscar por profesión</label>
+    <br>
+    <input type="text" id="profesion" />
+    <button onclick="FiltrarPorProfesion()">Buscar</button>
+
+    <br>
+
+    <label>Buscar por ciudad</label>
+    <br>
+    <input type="text" id="ciudad" />
+    <button onclick="FiltrarPorCiudad()">Buscar</button>
+
+    <br>
+    <label>Buscar por todos</label>
+    <button onclick="Filtrar()">Filtrar</button>
+
+    <section id="personas">
+        
+    </section>
+</body>
+
+</html>
