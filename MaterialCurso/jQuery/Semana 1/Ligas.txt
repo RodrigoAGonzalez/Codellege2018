@@ -1,0 +1,2 @@
+https://www.teaching-materials.org/jquery/#/
+https://www.w3schools.com/jquery/default.asp
