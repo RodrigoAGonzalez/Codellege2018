@@ -40,3 +40,200 @@ myLink.css( "border-color" );
 var p = $('p')
 p.addClass('special')
 $('body').append(p);
+
+
+Conceptos basicos de JavaScript
+  *Que es JavaScript
+    -Es un lenguaje guncional de programacion (web). Es el lenguaje interprete de los navegadores.
+  
+  *Como se escribe codigo JavaScript en una pagina HTML:
+    -Agregando la etiqueta <script> //Codigo </script> 
+ 
+  *Como se crean librerias de JavaScript
+    -Se crea un archivo con extension .JS
+
+  *Regularmente, que va dentro de una libreria de JavaScript
+    -Rara vez, se crean variables globales
+    -Funciones
+    -Definiciones de clases
+    NOTA: NO DEBERIAS AGREGAR LINEAS QUE EJECUTEN CODIGO
+      alert("Libreria Cargada")
+
+  *Escriba como se definen variables en JS:
+    -var Nombre;
+    -var Nomvre = VALOR;
+  Donde VALOR puede ser cualquier tipo de dato
+
+  *Escriba los tipos de dato en JS: 
+    -numeric: 1, 1.2, .4, etc 
+    -string: "Texto", "T", 
+    -bool: true | false
+    -array: [VALOR, VALOR, VALOR, ...] --> VALOR debe ser el mismo tipo de dato para todos dentro del arreglo
+    -object: {Var: Valor, Var: Valor ...} --> VAR es el nombre de una variable (propiedad, atributos), no se declara  con la palabra var, solo se le asigna el nombre que lo identifica
+    -func: NOMBRE_FUNCION --> Solo se asigna el nombre de la funcion de una variable
+
+  *Como se declara una funcion en JS
+     function apuntes(){}
+
+  *Como se declara una funcion parametrizada en JS:
+    function apuntes( fileLocation ){}
+
+  *Explique del bloque de codigo anterior, de que me sirve tener parametrizada la funcion:
+     -Los parametros son datos necesarios que las instrucciones o alguna instruccion de la funcion lo necesita para poder realizarse. Vuelve a las funciones dinamicas, hacen lo mismo pero con valores diferentes.
+     Ejemplo: Se tiene una funcion que muestra una alerta de bienvenida. La bienvenida dice VALOR "," VALOR.
+
+    function bienvenida( saludo, nombrePersona)
+    {
+        alert( saludo + ", " + nombrePersona);
+    }
+
+   *Del ejemplo anterior escriba que resultado muestra la llamada a la funcion con estos datos: bienvenida ("Hola", "Alex");
+    -Hola, Alex 
+
+  *Muestre las diferencias entre bienvenida(); y bienvenida( "Hola", "Alex" ); 
+     function bienvenida()  //funcion no parametrizada
+     {
+         alert( "Hola nuevo usuario! Bienvenido aCodellege!");
+     }
+
+     function bienvenido( saludo, persona) //Funcion parametrizada 
+     {
+         alert( saludo + ", " + persona + "Bienvenido a Codellge!");
+     }
+
+       -La primer funcion siempre muestra lo mismo
+       -La funcion parametrizada muestra resultados diferentes, pero sigue haciendo lo mismo.
+
+   *Que es un parametro de una funcion:
+     -Una variable. Los parametros se separan por ','. Puede haber N cantidad de parametros 
+      Ejemplo: 
+        funcion f(){} //0 parametros. Se le conoce como funcion no parametrizada
+        funcion f( nombre ){} //1 parametro. Cuando tiene 1 o mas parametros, se le conoce como funcion parametrizada 
+        funcion f( nombre,saludo ){} //2 parametros. Los parametros se separan por coma ','
+        funcion f( nombre, saludo, mensaje ){}  //3 parametros. Puede haber N cantidad de parametros.
+
+        *Como se convierte una funcion en un valor:
+          -Se agrega la palabra reservada 'return' y el valor que se desea retornar.
+          function suma(a, b)
+          {
+              //var suma = a + b;
+              //return suma;
+              return a + b;
+          }
+
+         *Escriba una funcion que se llama sumarEdades, a la que le pase como parametro un arreglo de personas.
+         De cada persona obtenga su atributo edad y sumelos todos. Regrese el resultado. 
+         
+         var personas;
+         var edad;
+         
+         function sumarEdades(personas){
+             var suma = 0
+            for (var i = 0; i < personas.length; i++){
+                var persona = personas[i];
+                var edad = persona.edad;
+                suma += edad;
+                //suma = suma + edad
+            }
+             return suma
+         }
+         
+         *Escriba la estructura del ciclo for:
+          for( var i = N; i < N; i++){}
+
+          *Ciclar 100 veces una instruccion:
+          for (var a = 0; a <= 99; a++){}
+
+          *Escriba una arreglo de 15 elementos y guardelo en la referencia "arreglo":
+            var arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+          *Del ejercicio anterior, escriba cual es el valor del elemento de la posicion 6:
+            -7
+
+          *Almacena en una variable el valor del ejercicio anterior:
+            var ejercicioAnterior = arreglo[6];
+
+          Cree un objeto persona. Agregue los atributos nombre, apellido, sexo, edad, RFC, ciudad, estado y pais.
+
+          var persona = {
+          Nombre: "Alex",
+          Apellido: "Torres",
+          Sexo: "M",
+          Edad: 16,
+          RFC: "TORP26",
+          Ciudad: "Apodamsterdam",
+          Estado: "Nuevo Leon",
+          Pais: "Mexico"
+          };
+
+          *Guarde en la referencia "value" el valor del nombre con un espacio y el apellido de la "persona"
+            var value = persona.nombre + " " + persona.apellido;
+
+            *Con que atributo y de que objeto podemos obtener acceso a nuestro cuerpo de la pagina
+             -document.body
+            Donde document es el objeto del documento (html) y body es el atributo, un objeto que representa el elemento body.
+             
+            Escriba las funciones que pueden ayudarnos a encontrar elementos web:
+              -document.getElementById( 'id' );   --> Retorna un HTMLElement object
+              -document.getElementsByName('name');   -->Retorna un arreglo de HTMLElement object
+              -document.getElementByClassName('clase');  --> Retorna un arreglo de HTMLElement object
+              -document.getElementByTagName('div');   --> Retorna un arreglo de HTMLElement object
+
+             *Explique que ocurre en la siguiente sentencia. Ejemplificacion con bloque de codigo html
+               var x = document.getElementByName("control");
+
+               -La variable 'x' almacena un arreglo de objetos HTMLElement.
+               -Utiliza el parametro de la funcion. que es un tipo de dato string que representa el atributo name del elemento:
+                <div name="control"></div>
+                <p name="control"></p>
+                <span name="control"></span>
+                x ha creado un arreglo con los 3 objetos del codigo HTML de arriba
+
+            *Almacene en la referencia "tercero" el elemento que representa al parrafo:
+               var tercer = document.getElementsByTagName('p')[0];
+               //var tercer = document.getElementByName('control')[1];
+
+            *Cree un objeto auditor, que tiene los atributos empleado y un arreglo de objetos especialistas que representan objetos del tipo
+            especialistas. El especialista tiene un atributo empleado. Empleado es un objeto con los atributos nombre, apellido, IS,
+             departamento, posicion.
+
+            
+           var _especialistas =
+           [
+               {
+                   empleado:
+                   {
+                    nombre: "Alex",
+                    apellido: "Torres",
+                    IS: "ABCD",
+                    departamento: "Norte",
+                    Posicion: "arriba"
+                   }
+               },
+                   empleado:
+               {
+                nombre: "Alex",
+                apellido: "Torres",
+                IS: "ABCD",
+                departamento: "Norte",
+                Posicion: "arriba"
+               }
+           ];
+
+           var auditor =
+           {
+               empleado
+               {
+                   nombre: "Virginia",
+                   apellido: "Martinez",
+                   IS: "VMR",
+                   departamento:"Quality Assurance",
+                   posicion: "Delivery Manager"
+               }
+
+
+               especialistas: _especialistas;
+           };
+
+           var rodrigo = auditor.especialistas[1].nombre;
+
