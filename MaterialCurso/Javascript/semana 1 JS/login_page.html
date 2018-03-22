@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .BlurBackground{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url('back.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        filter: blur(20px);
+
+        z-index: 0;
+    }
+
+    .DisplayTableCell{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .LoginPanel{     
+        width: 25%;
+        height: 60%;
+        margin: 10% auto;
+        background-color: rgba( 0, 0, 0, 0.20);
+        filter: blur(0);
+        display: table;
+        z-index: 1;
+
+        border-radius: 2px;
+
+        box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.20);
+
+        text-align: center;
+    }
+
+    h1{
+        color: white;
+    }
+
+    .StyledTextBox{
+        color: #ECECEC;
+        background: transparent;
+        border: 1px solid #ECECEC;
+        border-radius: 2px;
+        width: 60%;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+    }
+    .StyledTextBox:last-child{
+        margin-bottom: 1rem;
+    }
+
+    .Remember{
+        text-align: left;
+        margin-left: 20%;
+
+        color: #ECECEC;
+    }.Remember > label{
+        padding-left: 5px;
+    }
+
+    .btn{
+        width: 60%;
+        border-radius: 5px;
+        background-color: #5aafe7;
+        color: white;
+        font-size: 1.5rem;
+
+        border-style: none;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        cursor: pointer;
+    }
+
+    .items div{
+        color: #ECECEC;
+        font-size: 1rem;
+        width: 50%;
+        float: left;
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+
+    .items{
+        width: 60%;
+        text-align: left;
+        margin-left: 20%;
+    }
+</style>
+<body>
+    <div class="BlurBackground"></div>
+    <main>
+        <section class="LoginPanel">
+            <div class="DisplayTableCell">
+                <h1>
+                    Codellege
+                </h1>
+                <input type="text" value="Username or email" class="StyledTextBox" id="username" />
+                <input type="password" value="Password" class="StyledTextBox" id="password" />
+                <div class="Remember">
+                    <input type="checkbox" /><label>Remember me</label>
+                </div> 
+
+                <button class="btn" onclick="ShowData( 'username', 'password' )">
+                    LOGIN
+                </button>
+                <div class="items">
+                    <div class="MiddleSized">Register</div>
+                    <div class="MiddleSized">Forgot your password</div>
+                    <br><br>
+                    <div class="MiddleSized">← Back to Softtek</div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function ShowData( username, password )
+            {
+                var user = document.getElementById( username );
+                var pass = document.getElementById( password );
+
+                alert("Ingresó a la página con el usuario: " + user.value + " y con la contraseña: " +
+                      pass.value );
+            }
+        </script>
+    </main>
+</body>
+</html>

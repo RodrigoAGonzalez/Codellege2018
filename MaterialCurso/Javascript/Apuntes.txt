@@ -1,0 +1,160 @@
+Conceptos básicos HTML
+    *Qué es una etiqueta
+        -Un elemento web
+        Ejemplo: <ETIQUETA />
+        Ejemplo: <ETIQUETA></ETIQUETA>
+
+    *Mencione qué va dentro de las etiquetas
+        -Contenido
+
+    *Mencione qué puede ir dentro de la etiqueta antes del cierre de ésta
+        -Atributos (class, style, type, id, name, onclick, value)
+        Ejemplo: <ETIQUETA atributo />
+        Ejemplo: <ETIQUETA atributo></ETIQUETA>
+
+    *¿Cómo se asignan los atributos de una etiqueta?
+        -> ATRIBUTO="valor" 
+        Ejemplo: <input type="text" />
+
+    *Escriba la etiqueta CODELLEGE con el atributo horario que tenga el valor 8:30 A.M., el atributo sala que tenga el valor de Linares y profesor que tenga el valor Rodrigo,Kevin
+        -> <CODELLEGE horario="8:30 A.M." sala="Linares" profesor="Rodrigo,Kevin"></CODELLEGE>
+
+    *Qué tipos de etiquetas existen
+        - Doble etiqueta: <div>contenido</div>
+        - Etiqueta individual: <input type="text" /> ó <input type="text">
+        - Etiquetas mixtas: <li>Valor</li> ó <li>Valor
+    
+    *Qué es una página web
+        - Es un conjunto de etiquetas
+
+    *Escribe la estructura básica de HTML
+        <!DOCTYPE html> //Opcional, define el tipo de documento (Por default HTML 5)
+        <html>
+            <head>
+            </head>
+            <body>
+            </body>
+        </html>
+
+    *Describa todas las etiquetas que pueda (Incluya su comportamiento por defecto)
+        <div>: División, tiene un display de block, toma el 100% del width. No tiene height, crece con su contenido.
+        <nav>: Navegación, contiene una lista. Tiene display block, por lo que tiene width del 100%. Similar al div.
+        <meta>: Define propiedades globales de la página (charset, viewports, compatibilidades)
+        <link>: Importar (CSS, librerías JS, Fuentes, Multimedia, Frameworks, etc.)
+        <head>: Encabezado de la página, define la estructura de nuestra página al incializar (Propiedades)
+        <body>: Cuerpo de página. Todo el contenido de la página
+        <section>: Una sección. Igual al div (HTML 5)
+        <header>: La parte principal del body. Igual al div (HTML 5)
+        <footer>: La parte final (Pie de página). Igual al div (HTML 5)
+        <html>: Define que la página es un documento HTML
+        <p>: Es un párrafo de texto. Igual al div pero incluye márgenes y padding.
+        <span>: Es una línea o palabra. Tiene display inline-block. No tiene width ni height pero tiene márgenes
+        <br>: Salto de línea
+        <a>: Es una referencia a un enlace/link (Hipervínculo). Igual al span pero sin márgenes, cursor pointer y texto de color y subrayado.
+        <img>: Es una etiqueta que contiene una imagen. Igual al span sin márgenes
+        <ul>: Lista no ordenada. Igual al div pero con márgenes
+        <ol>: Lista ordenada. Igual al div pero con márgenes y numera/ordenado los elementos
+        <li>: Elemento de la lista (ol ó ul)
+        <table>: Crea una tabla. Igual que el div con márgenes y padding
+
+Conceptos básicos de CSS
+    *Qué significa CSS
+        -Cascading Style Sheet (Hoja de estilos en cascada)
+    
+    *Por qué se le dice "en cascada"
+        -Va en orden (Arriba hacia abajo)
+
+    *Qué es una regla de CSS
+        -Conjunto de propiedades definidas para un identificador
+
+    *Qué es un selector
+        -Identifica a un elemento
+
+    *Cómo se define una clase
+        -> .Clase, .Clase-algo, .Clase1
+
+    *Cómo se pone el selector para ID's
+        -> #id
+
+    *Qué es un nodo
+        -> Padre (Nodo) -> Hijo (Nodo)
+
+    *Mencione selectores de nodos
+        -Seleccionar todos los nodos iguales:
+            - SELECTOR, SELECTOR OTROSELECTOR, .CLASE, .CLASE OTROSELECTOR, #ID, #ID OTRO SELECTOR
+            Ejemplo: p{}, div p{}, .clase{}, .clase SELECTOR{}, #id{}, #id SELECTOR{}
+        -Seleccionar nodo siguiente:
+            - SELECTOR > SELECTOR
+            Ejemplo: div > p{}
+            <div> <img/> <p><span></p> <p></p> </div>
+
+    *Mencione pseudo-clases
+        -selector:hover -> Mouse encima
+        -selector:link -> Para un <a> (Cuando no ha sido visitado)
+        -selector:visited -> Para <a> ya visitado (Cuando se pone morado el link)
+        -selector:active -> Elemento activo (Solo los que interactúan)
+        -selector:first-child -> Selecciona el primer elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+            </ul>
+            ul li:first-child{} //Toma al primer elemento del tipo li, o sea, <li>A
+        -selector:last-child -> Selecciona el último elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+            </ul>
+            ul li:first-child{} //Toma al último elemento del tipo li, o sea, <li>C
+        -selector:nth-child( X ) //Toma al X elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+                <li>D
+                <li>E
+            </ul>
+            ul li:nth-child(2) //Toma el elemento 2 del tipo li, o sea, <li>B
+        
+    *Define una regla para un todos los <p> dentro de un <div> que está en una sección con la clase "Principal"
+        -> .Principal div p {}
+
+    *Qué es una propiedad en CSS
+        -Es una propiedad de estilo del elemento
+        Ejemplo: 
+            -max-width: 50%;
+            -text-align: center;
+
+    *Crear una regla para el primer <span> dentro de un párrafo con clase "Descripcion" que se encuentra en un div dentro del primer artículo de una sección con id "Inicio"
+        #Inicio > article div .Descripcion > span {
+            
+        }
+
+    *A la regla anterior, aplicar el estilo de negritas, color de texto gris oscuro, tamaño de fuente de 1 y medio de la fuente del navegador, borde inferior de 1 pixel color azul
+        #Inicio > article div .Descripcion > span {
+            font-weight: bold;
+            color: #888888;
+            font-size: 1.5rem;
+            border-bottom: 1px solid blue;
+        }
+
+    *Describa cada diferencia entre Margin, Padding y Border
+        -Border: Está en las orillas del elemento, se dibuja y es visible al usuario.
+        -Margin: Lo separa en las orillas, pero NO es las orilla
+        -Padding: Está dentro del elemento, no es visible y es el espaciado de las orillas hacia dentro
+
+    *Describa los comportamientos de los tipos de display
+        -block: width de 100%. No tiene altura
+        -inline-block: En la misma línea, tiene un pequeño margen. Se usa para palabras o texto en línea. Se puede cambiar la la altura y el ancho.
+        -table: Crea una tabla en el elemento Padre y se autoajusta a su contenido
+        -table-cell: Hace que un elemento sea una celda de una tabla (Se autoajusta). Habilita la propiedad vertical-align
+        -table-row: Hace que un elemento sea un renglón de una tabla (Se autoajusta)
+        -inline: Igual que el inline-block. Solo en la misma línea, o puedes cambiar la altura y ancho
+
+    *Describa los tipos de posicionamiento
+        -absolute: Posiciona el elemento encima de todos los demás, en left:0, top:0 del padre
+        -relative: Acomoda los elementos relativamente a sus display. Habilita la posición absolute de un elemento. Body es la etiqueta con position relative por defecto.
+        -fixed: Deja un elemento fijo en esa posición de la página (lo que ves)
+
+

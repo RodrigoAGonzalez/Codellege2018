@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+
+
+  <script>
+//var tablas = ("Esta es la tabla del 2")
+var tablas= ("Esta es la tabla del 2")
+    function go(){
+      alert (tablas)
+    }
+    go();
+  </script>
+
+<center>
+  <script>
+  var num = 2;
+  for(var i = 1;i<=10;i++){
+      var write= $("<h1>" +num+" x "+i+" = "+(num*i) +'</h1>');
+
+    $('body').append(write);
+    write.css('text-align', 'center',);
+    write.css('color', 'red',);
+  }
+  </script>
+<center/>
+
+
+
+</body>
+</html>
