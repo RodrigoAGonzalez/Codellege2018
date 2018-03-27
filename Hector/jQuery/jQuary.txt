@@ -1,0 +1,30 @@
+JS------------------------------------------
+var elemnto-0document.getElementbyId("algo");
+jq-------------------------------------------
+var elemento=$("#algo");
+JS-----------------------------------------
+elemento.innerHTML-><p>INNERHTML</p>
+JQ--------------------------------------
+elemento.html()  -> <p> INNERHTML</p>
+
+<a id="algo" href="htp://www.google.com">GOOGLE</a>
+JS---------------------------------------------------
+elemento.getAtribute("herf")
+elemento.setAtribute("href", "http://www.google.com"</a>
+JQ-----------------------------------------------
+elemnto.attr8"href") regresa el valor del atributo
+elemento.attr("href","valor");
+JS---------------------------------------------------
+elemento.style.bordecolor ;->"white"8border-color:whithe)
+elemento.style.bordercolor="red";
+JQ-------------------------------------------------------
+myLink.css("border-color");
+<p id="algo"></p>
+
+concatenar: unir texto. es la operacion de suma 
+
+$('a').html($('a').html()+"yahoo!");
+
+
+<p id="algo"></p>
+
