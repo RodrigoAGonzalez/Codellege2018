@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+
+window.onload =funcion() {
+alert('hi')}
+document.forms[0].onsubmit = function( e )
+{
+  e.preventDefault)();
+
+  var elements = document.forms[0].elements;
+  document.getElementbyId( 'cards' ).innerHTML += ""+
+  'div class="commentcard">'+
+  '<span class="UserData">'+ elements[2].value + ' - ' + date.toDateString() + "" + date.toTimestring() +
+  '</span>' +
+  '<p class="comment">' +
+    elements[3].value +
+    '</p>' +
+    '</div>';
+
+}
+  }
+</script>
+
+<style>
+.vertical-align{
+vertical-align: top;
+
+}
+.right-side{
+
+}
+body {
+    background-color: rgb(7, 4, 70);
+}
+h1 {
+  color: white;
+}
+span{
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<center>
+<h1> Feed de comentarios </h1>
+</center>
+<br />
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<form onsubmit="confirmInput()" >
+
+<span>Nombre:</span><input type="text"/>
+<br />
+<br />
+<span>Edad:</span><input type="3" maxlength="10" />
+<br />
+<br />
+<span>Nick:</span><input type="text" maxlength="3" size="10" />
+<br />
+<br />
+<span class="vertical-align">Password:</span>
+<br />
+<textarea rows="3" cols="40"></textarea>
+<br />
+<input type="submit" value="Submit" > <input type="submit" >
+<br />
+<br />
+</div>
+</form>
+
+
+
+<div class="col-sm-8" id="#cards">
+
+<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
+<br />
+<br />
+<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
+<br />
+<br />
+<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
+<br />
+<br />
+<div class="card bg-dark text-white">
+  <div class="card-body">Dark Orli</div>
+</div>
+</div>
+
+</div>
+</div>
+
+  </body>
+</html>
