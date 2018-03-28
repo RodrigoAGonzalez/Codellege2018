@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> no se que ejercicio es </title>
+  <link rel="stylesheet" href="csstarea.css">
+</head>
+
+<body>
+  <form onsubmit="return false">
+  <div class="ladoizquierdo">
+
+    <label>Nombre:</label></br>
+    <input type="text" name="nombre" id="nombre" value=""> </br>
+
+    <label>E-mail</label>  </br>
+    <input type="text" name="email" id="email" value=""> </br>
+
+    <label>Nick</label></br>
+    <input type="text" name="nick" id="nick" value=""> </br>
+
+    <label>Comentarios:</label> </br>
+    <textarea name="comentarios" id="comentarios" rows="5" cols="50"></textarea></br>
+
+    <input type="submit" name="reset" value="reset">
+    <input type="submit" name="send" id="enviar" onclick="copiarDatos()" value="send" >
+  </div>
+  </form>
+
+
+
+  <div class="ladoderecho" id="seccion2">
+    <h1> Feed de Comentarios </h1>
+      <div>
+        <input type="textarea" id="recibiendoDatos" name="" value="">
+      </div>
+      </div>
+
+<script type="text/javascript">
+function copiarDatos(){
+var nombre = document.getElementById("nombre").value;
+var mail = document.getElementById("email").value;
+var nick = document.getElementById("nick").value;
+var comentarios = document.getElementById("comentarios").value;
+
+var texto = nombre + " " + mail + " " + nick + " " + comentarios;
+
+document.getElementById("recibiendoDatos").value = texto;
+}
+
+</script>
+
+</body>
+
+</html>
