@@ -1,7 +1,11 @@
 
  body {
-   background-color:rgb(10, 240, 255)
+   background-color: green;
 }
  h1{
    text-align: center;
  }
+
+textarea{
+
+}

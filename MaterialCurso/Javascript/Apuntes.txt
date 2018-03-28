@@ -156,8 +156,272 @@ Conceptos básicos de CSS
         -absolute: Posiciona el elemento encima de todos los demás, en left:0, top:0 del padre
         -relative: Acomoda los elementos relativamente a sus display. Habilita la posición absolute de un elemento. Body es la etiqueta con position relative por defecto.
         -fixed: Deja un elemento fijo en esa posición de la página (lo que ves)
+<<<<<<< HEAD
     
     * conceptos basicos de javascript
     * Que es javascript
     - es un lenguaje de programacion(web). es un lenguaje interprete de los navegadores.
+=======
 
+Conceptos básicos de JavaScript
+    *Qué es JavaScript
+        -Es un lenguaje funcional de programación (Web). Es el lenguaje intérprete de los navegadores.
+>>>>>>> e8109154102dc19bb860d774a5dc77ee7e2a38c6
+
+    *Cómo se escribe código JavaScript en una página HTML:
+        -Agregando la etiqueta <script> //Código </script>
+
+    *Cómo se crean librerías de JavaScript
+        -Se crea un archivo con la extensión .JS
+        -No se agregan las etiquetas <script></script>. Solo se escribe código JS en el archivo
+
+    *Regularmente, qué va dentro de una librería de JavaScript:
+        -Rara vez, se crean variables globales
+        -Funciones
+        -Definiciones de clases
+        NOTA: NO DEBERÍAMOS AGREGAR LÍNEAS QUE EJECUTEN CÓDIGO.
+            Ejemplo:
+                alert( "Librería cargada" );
+
+    *Escriba cómo se definen variables en JS:
+        - var NOMBRE;
+        - var NOMBRE = VALOR;
+        Donde VALOR puede ser cualquier tipo de dato.
+
+    *Escriba los tipos de dato en JS:
+        - numeric: 1, 1.2, 0.4, etc.
+        - string: "Texto", "T", 'Texto', 'T'
+        - bool: true | false
+        - array: [ VALOR, VALOR, VALOR , ... ] -> VALOR debe ser el mismo tipo de dato para todos dentro del arreglo
+        - object: { VAR: VALOR, VAR: VALOR ... } -> VAR es el nombre de una variable (propiedad, atributos), no se declara con la palabra var, solo se le asigna el nombre que lo identifica.
+        - func: NOMBRE_FUNCION -> Solo se asigna el nombre de la función a una variable
+
+    *Cómo se declara una función en JS:
+        function apuntes()
+        {
+            
+        }
+    
+    *Cómo se declara una función parametrizasa en JS:
+        function apunter( fileLocation )
+        {
+
+        }
+    
+    *Explique del bloque de código anterior, de qué me sirve tener parametrizada la función:
+        - Los parámetros son datos necesarios que las instrucciones o alguna instrucción en específico de la función lo necesita para poder realizarse. Vuelve a las funciones dinámicas, hacen lo mismo pero con valores diferentes.
+        Ejemplo: Se tiene una función que muestra una alerta de bienvenida. La bienvenida dice VALOR ", " VALOR.
+
+        function bienvenida( saludo, nombrePersona )
+        {
+            alert( saludo + ", " + nombrePersona );
+        }
+
+    *Del ejemplo anterior escriba qué resultado muestra la llamada a la función con estos datos: bienvenida( "Hola", "Alex" );
+        - Hola, Alex
+
+    *Muestre las diferencias entre bievenida(); y bienvenida( "Hola", "Alex" ); :
+        function bienvenida() //Función no parametrizada
+        {
+            alert( "Hola nuevo usuario! Bienvenido a Codellege!" );
+        }
+
+        function bienvenida( saludo, persona ) //Función parametrizada
+        {
+            alert( saludo + ", " + persona + "! Bienvenido a Codellege" );
+        }
+
+        - La primer función siempre muestra lo mismo.
+        - La función parametrizada muestra resultados diferentes, pero sigue haciendo lo mismo.
+
+    *Qué es un parámetro de una función:
+        - Una variable. Los parámetros se separan por ','. Puede haber N cantidad de parámetros.
+        Ejemplo:
+            function f(){} //0 parámetros. Se le conoce como función no parametrizada
+            function f( nombre ){} //1 parámetro. Cuando tiene 1 o más parámetros, se le conoce como función parametrizada
+            function f( nombre, saludo ){} //2 parámtros. Los parámetros se separan por coma ','
+            function f( nombre, saludo, mensaje ){} //3 parámetros. Puede haber N cantidad de parámetros.
+
+    *Cómo se convierte un función en valor:
+        - Se agrega la palabra reservada 'return' y el valor que se desea retornar.
+        function suma( a, b )
+        {
+            //var suma = a + b;
+            //return suma;
+            return a + b;
+        }
+
+    *Escriba una función que se llame sumarEdades, a la que le pase como parámetro un arreglo de personas. De cada persona obtenga su atributo edad y súmelos todos. Regrese el resultado:
+
+    function sumarEdades( personas )
+    {
+        var suma = 0;
+        for( var i = 0; i < personas.length; i++ )
+        {
+            var persona = personas[i];
+            var edad = persona.edad;
+            suma += edad;
+            //suma = suma + edad;
+        }
+
+        return suma;
+    }
+
+    *Escriba la estructura del ciclo for:
+        for( var i = N; i [<><=>=] M; i++ ) //Está mal
+        {
+
+        }
+
+    *Ciclar 100 veces una instrucción:
+        for( var a = 0; a <= 99; a++)
+        {
+
+        }
+
+    *Escriba una arreglo de 15 elementos y guárdelo en la referencia "arreglo":
+        var arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+    *Del ejercicio anterior, escriba cuál es el valor del elemento de la posición 6:
+        - 7
+
+    *Almacene en una variable el valor del ejercicio anterior:
+        var ejercicioAnterior = arreglo[6];
+
+    *Cree un objeto persona. Agregue los atributos nombre, apellido, sexo, edad, RFC, ciudad, estado y país.
+        var persona =
+        {
+            nombre: "Orlando",
+            apellido: "Salinas de Gortari",
+            sexo: "M",
+            edad: 22,
+            RFC: "OSG1234563454",
+            ciudad: "SaltilloYork",
+            estado: "Coahuila",
+            pais: "México"
+        };
+
+    *Guarde en la referencia "nombreCompleto" el valor del nombre con un espacio y el apellido de la "persona":
+        var nombreCompleto = persona.nombre + " " + persona.apellido;
+
+    *Con qué atributo y de qué objeto podemos obtener acceso a nuestro cuerpo de la página:
+        - document.body
+        Donde document es el objeto del documento (html) y body es el atributo, un objeto que representa al elemento <body>
+
+    *Escriba las funciones que pueden ayudarnos a encontrar elementos web:
+        - document.getElementById( 'id' );              -> Retorna un HTMLElement object
+        - document.getElementsByName( 'name' );         -> Retorna un arreglo de HTMLElement object
+        - document.getElementsByClassName( 'clase' );    -> Retorna un arreglo de HTMLElement object
+        - document.getElementsByTagName( 'div' );        -> Retorna un arreglo de HTMLElement object
+
+    *Explique qué ocurre en la siguiente sentencia. Ejemplifique con bloques de código HTML:
+        var x = document.getElementsByName( "control" );
+
+        - La variable 'x' almacena un arreglo de objetos HTMLElement.
+        - Utiliza el parámetro de la función, que es un tipo de dato string que representa el atributo name del elemento:
+            <div name="control"></div>
+            <p name="control"></p>
+            <span name="control"></span>
+        - x ha creado un arreglo con los 3 objetos del código HTML de arriba
+
+    *Almacene en la referencia "tercero" el elemento que representa al párrafo:
+        var tercero = document.getElementsByTagName( 'p' )[0]
+        var tercero = document.getElementsByName( 'control' )[1];
+
+    *Cree un objeto auditor, que tiene los atributos empleado y un arreglo de objetos especialistas que representan objetos del tipo especialista. El especialista tiene un atributo empleado. Empleado es un objeto con los atributos nombre, apellido, IS, departamento, posicion.
+
+        var _especialistas =
+        [
+            {
+                empleado:
+                {
+                    nombre: "Kevin",
+                    apellido: "Martin del Campo",
+                    IS: "KMCF",
+                    departamento: "Quality Assurance",
+                    posicion: "Consultor"
+                }
+            },
+            {
+                empleado:
+                {
+                    nombre: "Rodrigo",
+                    apellido: "González",
+                    IS: "RGRR",
+                    departamento: "Application Management and Support",
+                    posicion: "AMS"
+                }
+            }
+        ];
+
+        var auditor = 
+        {
+            empleado:
+            {
+                nombre: "Virginia",
+                apellido: "Martínez",
+                IS: "VMR",
+                departamento: "Quality Assurance",
+                posicion: "Delivery Manager"
+            }
+            especialistas: _especialistas;
+        };
+
+        var rodrigo = auditor.especialistas[1].nombre;
+
+Conceptos básicos de jQuery
+    *Qué es jQuery:
+        - Es una librería de JS.
+
+    *Cuál es la función global de jQuery y cómo se llama:
+        - $( params ) y se llama 'jQuery'
+
+    *Cómo busco un elemento en el documento con jQuery. Escriba las diferentes formas que sepa y su equivalente en JS:
+        - $( 'p' ) -> document.getElementsByTagName( 'p' ) -> Retorna un arreglo de jQueryElement
+        - $( '.nombre_clase' ) -> document.getElementsByClassName( 'nombre_clase' ) -> Retorna un arreglo de jQueryElement
+        - $( '#nombre_id' ) -> document.getElementById( 'nombre_id' ) -> Retorna un objeto de jQueryElement
+        - $( 'nombre_name' ) -> document.getElementsByName( 'name' ) -> Retorna un array de jQueryElement
+        - $( document ) -> document -> Retorna el objeto document que representa al documento <HTML>
+        - $( window ) -> window -> Retorna al objeto que window que representa a la ventana del navegador
+
+    *Cómo se crean eventos en JS y escriba su equivalente en jQuery:
+        document.onload = function() { //Qué hacer };
+        document.addEventListener( "onload", function(){ //Qué hacer } );
+        elemento.evento... -> Todos los eventos son funciones
+
+        $( document ).load(function() { //Qué hacer });
+        $( window ).load(function() { //Qué hacer });
+        $( elemento ).click(function() { //Qué hacer });
+
+        <div onclick="nombre_funcion()"></div>
+
+    *Escriba el equivalente de modificar el contenido de una etiqueta en JS y en jQuery:
+        document.body -> Es el objeto HTMLElement que representa a la etiqueta <body>
+        document.getElement...( param ) -> Retorna un objeto o arreglo de objetos HTMLElement que representa al o los elementos de dicho parámetro.
+
+        //JavaScript
+        document.body.innerHTML = "<etiquetas>CONTENIDO</etiquetas>";
+        document.getElementById( 'nombre_id' ).innerHTML = "...";
+
+        //jQuery
+        $( 'body' ).html( "contenido... <adf></adf>" );
+        $( '#nombre_id' ).html( "contenido" );
+
+    *Escriba el código necesario en jQuery para hacer que el siguiente bloque HTML, muestre un alert en el evento click del botón:
+        //HTML
+        <div>
+            <label class="boton">Mostrar alerta: </label>
+            //<button id="boton">Mostrar</button>
+            //<button name="boton">Mostrar</button>
+            //<button class="boton">Mostrar</button>
+            <button>Mostrar</button>
+        </div>
+
+        //jQuery
+        $( '#boton' ).click( function(){ alert("Hola"); } );
+        $( 'button' )[0].click( function(){ alert("Hola"); } );
+        $( 'boton' )[0].click( function(){ alert("Hola"); } );
+        $( '.boton' )[1].click( function(){ alert("Hola"); } );
+
+    *Escriba cómo importar la librería de jQuery:
+        <script src="https://www.kjddkladkdkl/jQuery.0.3.1.js"></script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PaginaDeCumpleañosV5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div.card {width: 40%;
+border: 2px solid peru;
+}
+img {max-width: 150px;}
+div.card:hover div {background-color:lightblue; font-size: 100%; display: block;}
+</style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">Cumpleaños</a>
+
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 2</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+    </header>
+    <main>
+
+
+<section id="Cumples">
+
+<script>
+var persona =
+[
+  {
+    nombre: "Kevin ",
+    apellido: "Martin del Campo",
+    fecha: "14/04/1995",
+    regalo: "Le gusta el pastel de chocolate y reganlenle Riot Points",
+    sexo: "M"
+    /*imagen: "Imagenes/Meme.jpg"*/
+  },
+  {
+    nombre: "Rodrigo ",
+    apellido: "Gonzalez",
+    fecha: "21/08/1992",
+    regalo: "Le gusta los perfumes y la joyeria (Esclavas, cadenas)",
+    sexo: "M"
+  },
+  {
+    nombre: "Alejandro ",
+    apellido: "Torres",
+    fecha: "26/04/2001",
+    regalo: "Regalenle tarjetas de Ituna-s",
+    sexo: "M"
+  },
+  {
+    nombre: "Orlando ",
+    apellido: "Duarte",
+    fecha: "31/08/1995",
+    regalo: "Quiere mucha atencion y amorrr <3",
+    sexo: "M"
+  },
+  {
+    nombre: "Hector ",
+    apellido: "Martinez",
+    fecha: "19/02/1990",
+    regalo: "Quiere un Jersey de futbol, perfumes o relojes",
+    sexo: "M"
+  },
+  {
+    nombre: "Hugo ",
+    apellido: "Montaño",
+    fecha: "08/06/1987",
+    regalo: "Le gusta el pastel alemán y las cosas de Batma",
+    sexo: "M"
+  },
+  {
+    nombre: "Teresa ",
+    apellido: "Mata",
+    fecha: "08/02/1992",
+    regalo: "Le gusta los relojes y una gift card SEPHORA",
+    sexo: "M"
+  },
+  {
+    nombre: "Meme ",
+    apellido: "Rodriguez",
+    fecha: "23/01/1998",
+    regalo: "Un boleto de viaje a Europa",
+    sexo: "M"
+  }
+
+]
+var section = document.getElementById("Cumples")
+for (var i = 0; i < persona.length; i++){
+  section.innerHTML +=
+  '<div class="card" style="float:left;">' + '<img class="card-img-top" src="imagenes/ballon.jpg" ' + persona[i].imagen + '/>' + '<div class="card-body">' + '<h3 class="card-title">' + persona[i].nombre +
+     "" + persona[i].apellido + '</h3>' + '<span>' + persona[i].fecha + '</span>' + '<p class="card-text">' +
+       persona[i].regalo + '</p>' + '<p ="card-text">' + persona[i].sexo + '</p>' + '</div>' + '</div>';
+}
+
+</script>
+<script type="text/javascript">
+  var variable = $('p');
+</script>
+</section>
+
+
+    </main>
+    <footer>
+
+
+
+    </footer>
+
+  </body>
+</html>
