@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script>
+    window.onload = function() { /* windows.onload es lo mismo que el document.ready en jquery */
+    document.forms[0].onsubmit = function(e)
+    /*document es un objeto, form es un arreglo y en este caso es un arreglo
+     de elementos, onsubmit es un evento que se acciona cuando un formulario es enviado,
+      esto solo aplica en forms */
+    {
+      e.preventDefault(); /*onsubmit hace que se recarge la pagina, el preventbydefault  */
+      var date = new Date();
+      var elements = document.forms[0].elements;
+      document.getElementById('cards').innerHTML += "" + /*  */
+        '<div class="commentcard">' +
+        '<span class="UserData">' + elements[2].value + ' - ' + date.toDateString() + "" + date.toTimeString() +
+        '</span>' +
+        '<p class="comment">' +
+        elements[3].value +
+        '</p>' +
+        '</div>';
+    }
+    };
+  </script>
 
-window.onload =funcion() {
-alert('hi')}
-document.forms[0].onsubmit = function( e )
-{
-  e.preventDefault)();
+  <style>
+    html,
+    body {
+      width: 100
+    }
 
-  var elements = document.forms[0].elements;
-  document.getElementbyId( 'cards' ).innerHTML += ""+
-  'div class="commentcard">'+
-  '<span class="UserData">'+ elements[2].value + ' - ' + date.toDateString() + "" + date.toTimestring() +
-  '</span>' +
-  '<p class="comment">' +
-    elements[3].value +
-    '</p>' +
-    '</div>';
+    .vertical-align {
+      vertical-align: top;
+    }
 
-}
-  }
-</script>
+    .right-side {}
 
-<style>
-.vertical-align{
-vertical-align: top;
+    body {
+      background-color: rgb(7, 4, 70);
+    }
 
-}
-.right-side{
+    h1 {
+      color: white;
+    }
 
-}
-body {
-    background-color: rgb(7, 4, 70);
-}
-h1 {
-  color: white;
-}
-span{
-  color: white;
-}
-</style>
+    span {
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-<center>
-<h1> Feed de comentarios </h1>
-</center>
-<br />
-<div class="container">
-<div class="row">
-<div class="col-sm-4">
-<form onsubmit="confirmInput()" >
+  <center>
+    <h1> Feed de comentarios </h1>
+  </center>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
 
-<span>Nombre:</span><input type="text"/>
-<br />
-<br />
-<span>Edad:</span><input type="3" maxlength="10" />
-<br />
-<br />
-<span>Nick:</span><input type="text" maxlength="3" size="10" />
-<br />
-<br />
-<span class="vertical-align">Password:</span>
-<br />
-<textarea rows="3" cols="40"></textarea>
-<br />
-<input type="submit" value="Submit" > <input type="submit" >
-<br />
-<br />
-</div>
-</form>
+        <form onsubmit="myFunction()">
+
+          <span>Nombre:</span><input type="text" />
+          <br />
+          <br />
+          <span>Edad:</span><input type="3" maxlength="10" />
+          <br />
+          <br />
+          <span>Nick:</span><input type="text" maxlength="3" size="10" />
+          <br />
+          <br />
+          <span class="vertical-align">Password:</span>
+          <br />
+          <textarea rows="5" cols="40"></textarea>
+          <br />
+          <input type="submit" value="submit" >
+          <br />
+          <br />
+        </form>
+      </div>
 
 
 
-<div class="col-sm-8" id="#cards">
 
-<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
-<br />
-<br />
-<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
-<br />
-<br />
-<textarea rows="5" cols="90">El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.El Poderoso inigualable Orlando ataca otra vez.</textarea>
-<br />
-<br />
-<div class="card bg-dark text-white">
-  <div class="card-body">Dark Orli</div>
-</div>
-</div>
+      <div class="col-sm-8">
 
-</div>
-</div>
 
-  </body>
+        <div class="card bg-dark text-white" id="cards">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+</body>
+
 </html>
