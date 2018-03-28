@@ -1,4 +1,4 @@
-Conceptos básicos HTML
+﻿Conceptos básicos HTML
     *Qué es una etiqueta
         -Un elemento web
         Ejemplo: <ETIQUETA />
@@ -156,10 +156,17 @@ Conceptos básicos de CSS
         -absolute: Posiciona el elemento encima de todos los demás, en left:0, top:0 del padre
         -relative: Acomoda los elementos relativamente a sus display. Habilita la posición absolute de un elemento. Body es la etiqueta con position relative por defecto.
         -fixed: Deja un elemento fijo en esa posición de la página (lo que ves)
+<<<<<<< HEAD
+    
+    * conceptos basicos de javascript
+    * Que es javascript
+    - es un lenguaje de programacion(web). es un lenguaje interprete de los navegadores.
+=======
 
 Conceptos básicos de JavaScript
     *Qué es JavaScript
         -Es un lenguaje funcional de programación (Web). Es el lenguaje intérprete de los navegadores.
+>>>>>>> e8109154102dc19bb860d774a5dc77ee7e2a38c6
 
     *Cómo se escribe código JavaScript en una página HTML:
         -Agregando la etiqueta <script> //Código </script>

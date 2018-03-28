@@ -119,44 +119,39 @@
 
   </script>
 </head>
-
-
 <body>
+  <script>
+
+    document.body.innerHTML+= '<h1>sucursales de la tienda"' + carnitaAsada.nombre + '"</h1>';
+    for (i = 0; i<carnitaAsada.sucursales.length; i++){
+  var colonia = carnitaAsada.sucursales[i].colonia;
+  var precio = carnitaAsada.sucursales[i].precio;
+  var clave = carnitaAsada.sucursales[i].clave;
+  var nombre = carnitaAsada.sucursales[i].nombre;
+  var articulos = carnitaAsada.sucursales[i].articulos;
 
 
-  <script type="text/javascript"> 
-  ducument.body.innerHTML +='<h1> sucursales de la tienda </h1>'
-  
-  for (var i = 0; i< carnitaAsada.sucursales.length; i+ +  ) 
+  document.body.innerHTML += '<h3>Sucursal:' + nombre + "<br/>" + "&nbsp; &nbsp;&nbs;calle"'</h3>';
+   + calle + "<br/>" + "&nbsp; &nbsp;&nbs;numero:" + numero + "<br/>" + "&nbsp; &nbsp;&nbs;colonia"
+   + colonia + '</h3>'
+
+  for (var b = 0; b<carnitaAsada.sucursales[i].articulos.length;b++){
+  var clave = carnitaAsada.sucursales[i].articulos[b];
+  //document.body.innerHTML += "<h3>Articulos:" + articulos +   "</h3>";
+  for (var c = 0; c<productos.length;c++){
+    if (clave == productos[c].clave)
   {
-var colonia = carnitaAsada.sucursales.[i].colonia;
-var numero = carnitaAsada.sucursales[i].numero;
-var calle = carnitaAsada.sucursales[i].calle;
-var nombre = carnitaAsada.sucursales[i].nombre;
-var articulos = carnitaAsada.sucursales[i].articulos;
+  var producto = productos.[c];
+  document.body.innerHTML += '<h3>articulo:' + producto.nombre +',$'+ producto.precio + '</h3>';
 
-document.body.innerHTML+ = '<h3 > sucursal: ' <h3> sucursal '+ nombre + "</br>" + colonia + "</br> + numero+ "</br>" + calle + "</br>" +  "</br>" + '</h3>' 
-
-for (var b = 0; b<carnitaAsada.sucursales.articulos.length; b++){
-  var articulos= carnitaAsada.sucursales[i].articulos[b]:
-  document.body.innerHTML += "<h3> Aritculos:" + articulos "  + articulos + "<h3>";
-
-       ///document.body.HTML+= <h3>Articulos:"+ clave + " </h3>///
-
-for (var c=0 ; c < productos.length; c++ ){
-  if(calve== productos[c].clave)
-  {
-    var producto= productos[c];
-    document.body.innerHTML+='<h3>articulo: '+ producto.nombre + ', $ '+ producto.precio + '</h3>'
+        }
+      }
+    }
   }
-}
-
-}  
-
-
-  } 
-
   </script>
+
+
+
 </body>
 
 </html>
