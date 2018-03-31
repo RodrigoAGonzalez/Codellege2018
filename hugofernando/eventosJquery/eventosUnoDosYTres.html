@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> eventos de click o mouseover </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        /// ready (listo) es un evento que ocurre cuando se ha cargado el DOM (modelo de objeto del documento)
+
+        $("h1").click(function(e){
+          //define un evento para click en el elemento H1
+          // sentencias que se ejecitan cuando se haga click sobre el H1
+          $("h1").css("color", "red");
+        })
+         // para cambiar el tipo de letra
+        $("h1").mouseover(function(e){
+          $("h1").css("font-weight", "normal");
+        });
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <h1> poderoso y legendario rodri </h1>
+    <h1> mistico y sabio kevin </h1>
+  </body>
+</html>
