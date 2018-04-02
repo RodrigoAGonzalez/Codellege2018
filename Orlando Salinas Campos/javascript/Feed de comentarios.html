@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    window.onload = function() { /* windows.onload es lo mismo que el document.ready en jquery */
+    document.forms[0].onsubmit = function(e)
+    /*document es un objeto, form es un arreglo y en este caso es un arreglo
+     de elementos, onsubmit es un evento que se acciona cuando un formulario es enviado,
+      esto solo aplica en forms */
+    {
+      e.preventDefault(); /*onsubmit hace que se recarge la pagina, el preventbydefault  */
+      var date = new Date();
+      var elements = document.forms[0].elements;
+      document.getElementById('cards').innerHTML += "" + /*  */
+        '<div class="commentcard">' +
+        '<span class="UserData">' + elements[2].value + ' - ' + date.toDateString() + "" + date.toTimeString() +
+        '</span>' +
+        '<p class="comment">' +
+        elements[3].value +
+        '</p>' +
+        '</div>';
+    }
+    };
+  </script>
+
+  <style>
+    html,
+    body {
+      width: 100
+    }
+
+    .vertical-align {
+      vertical-align: top;
+    }
+
+    .right-side {}
+
+    body {
+      background-color: rgb(7, 4, 70);
+    }
+
+    h1 {
+      color: white;
+    }
+
+    span {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1> Feed de comentarios </h1>
+  </center>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+
+        <form onsubmit="myFunction()">
+
+          <span>Nombre:</span><input type="text" />
+          <br />
+          <br />
+          <span>Edad:</span><input type="3" maxlength="10" />
+          <br />
+          <br />
+          <span>Nick:</span><input type="text" maxlength="3" size="10" />
+          <br />
+          <br />
+          <span class="vertical-align">Password:</span>
+          <br />
+          <textarea rows="5" cols="40"></textarea>
+          <br />
+          <input type="submit" value="submit" >
+          <br />
+          <br />
+        </form>
+      </div>
+
+
+
+
+      <div class="col-sm-8">
+
+
+        <div class="card bg-dark text-white" id="cards">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+</body>
+
+</html>
