@@ -144,9 +144,28 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $('.jquery__append-text').click(function(){
-            $('p').append('<li>Appended item</li>')
-        });
-    });
+            $('.jquery__append p').append('<b>Appended text</b>');
+		});
+		$('.jquery__append-list').click(function(){
+		    $('.jquery__append ol').append('<li>Appended item</li>');
+		});
+		$('.jquery__prepend-text').click(function(){
+			$('.jquery__prepend p').prepend('<b>Prepended text</b>');		
+		});
+		$('.jquery__prepend-list').click(function(){
+		    $('.jquery__prepend ol').prepend('<li>Prepended item</li>');
+		});
+		$('.jquery__after').click(function(){
+			$('.jquery__after-before p').after('<span>.after()</span>');
+		});
+		$('.jquery__before').click(function(){
+			$('.jquery__after-before p').before('<span>.before</span>');
+		});
+		$('.jquery__empty-button').click(function(){
+			$('.jquery__remove-div').empty();
+		})
+	});
+	
 	</script>
 </body>
 </html>
