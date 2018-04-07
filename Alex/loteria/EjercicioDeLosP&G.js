@@ -49,8 +49,20 @@ dejarAdentro = function(){
 
 
 var gato = new Tamagochi();
-this.calidadDeCasa = 100;
-
+gato.calidadDeCasa = 100;
+meow = function(){
+    console.log('miau');
+};
+destruirMuebles = function(){
+    if ((calidadDeCasa - 10) > 0){
+        calidadDeCasa -= 10;
+        aburrido = false;
+        adormecido = false;
+    }
+}
+comprarMuebles = function(){
+    calidadDeCasa += 50
+}
 
 
 
