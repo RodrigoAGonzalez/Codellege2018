@@ -16,13 +16,12 @@ function imprimirDatos(datos) {
         var post = datos[i];
         var elemento = $('#template').clone().removeAttr('id');
 
-        elemento.children('').text()   
-        $('.post__titulo').
-    }  
-}
+        elemento.children('.post__title').text(post.title);
+    };  
+};
 
 var titulo = datos[i].title;
-    $(elemento).children('post__titulo').text()
+    $(elemento).children('post__title').text()
 
 obtenerDatos()
 .done(function(response){
