@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="Alumnos">
+
+    </div>
+
+
+    <script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystagechange = () =>
+    {
+      if(xhttp.readyState == 4 && xhttp.status == 200)
+      {
+        var doc = JSON.parse(xhttp.responseText);
+        var alumnos = document.getElementById("Alumnos");
+
+        doc.alumnos.forEach( a =>{
+          alumnos.innerHTML += "<p>" + a.Nombre + "<br>" +
+          a.ApellidoP + "<br>" + a.ApellidoM + "<br>" +
+          a.Sexo + "<br>" + a.Edad + "<br>" + "</p>";
+        })
+      }
+    };
+    xhttp.open("GET", "PHP/sql.php", true);
+    xhttp.send();
+    </script>
+  </body>
+</html>
