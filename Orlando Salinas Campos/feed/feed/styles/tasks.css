@@ -1,0 +1,57 @@
+.nav-task{
+    color: #888888;
+    font-size: 1.3rem;
+    border-left: 1px solid #888888;
+}
+.nav-task *{
+    margin-left: 0.15rem;
+}
+
+.nav-task div{
+    border-bottom: 0.5rem solid transparent;
+}
+
+.nav-task img{
+    width: 28px;
+    height: 28px;
+}
+
+.nav-summary{
+    color: #888888;
+    font-size: 1.1rem;
+    float: right;
+    border: 1px solid #999999;
+}
+
+.nav-summary > div > div{
+    padding: 1rem;
+}
+.nav-summary > div > div span{
+    display: block;
+}
+
+.nav-summary > div > div > div div:first-child{
+    float: left;
+}
+.nav-summary > div > div > div div:last-child{
+    float: left;
+    text-align: right;
+}
+
+.task-template{
+    border: 1px solid #AAAAAA;
+    background: #585858;
+    padding: 1rem;
+    padding-bottom: 0.25rem;
+    min-height: 170px;
+    height: 100%;
+}
+
+.task-template *{
+    color: #EFEFFF;
+}
+
+.separate-border{
+    border-collapse: separate;
+    border-spacing: 1.5rem;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/tasks.css">
+    <title>Document</title>
+    <script>
+        var initId = 0, maxFetch = 10;
+
+        function loadMoreComments()
+        {
+            var feed = document.getElementById( '_FEED_AJAX_REQUEST_FILL_' );
+            feed.innerHTML = "";
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = () =>{
+                if( http.readyState == 4 )
+                {
+                    var doc = JSON.parse(http.responseText);
+                    doc.results.forEach( post =>{
+                        feed.innerHTML += '' +
+                        '<div class="CommentCard">' +
+                            '<span class="UserData">' + post.title + " :: -> " + post.nick + ' - ' + post.posted + '</span>' +
+                            '<p class="Comment">' +
+                                post.body +
+                            '</p>' +
+                        '</div>';
+                    });
+                    initId += 10;
+                }
+            };
+            http.open( "GET", "http://localhost:3000?id=" + initId + "&max=" + maxFetch, true );
+            http.send();
+        }
+
+        window.onload = function() 
+        { 
+            loadMoreComments();
+
+            document.forms[0].onsubmit = function( e )
+            {
+                
+                var date = new Date();
+                var elements = document.forms[0].elements;
+
+                document.getElementById( '_FEED_AJAX_REQUEST_FILL_' ).innerHTML += "" +
+                '<div class="CommentCard">' +
+                    '<span class="UserData">' + elements[4].value + " :: -> " + elements[3].value + ' - ' + new Date().toString() + '</span>' +
+                    '<p class="Comment">' +
+                        elements[5].value +
+                    '</p>' +
+                '</div>';
+                
+                var ajax = new XMLHttpRequest();
+                var body = '';
+                body += '{';
+                body +=     '"id": 700,';
+                body +=     '"name": "' + elements[0].value + '",';
+                body +=     '"lastname": "' + elements[1].value + '",';
+                body +=     '"nick": "' + elements[3].value + '",';
+                body +=     '"posted": "' + new Date().toString() + '",';
+                body +=     '"title": "' + elements[4].value + '",';
+                body +=     '"body": "' + elements[5].value + '"';
+                body += '}';
+                ajax.open( "POST", "http://localhost:3000", true );
+                ajax.send( body );
+
+                e.preventDefault();
+            }   
+        };
+    </script>
+</head>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    body  {
+    background-image: url("stars.jpg");
+    background-attachment:fixed;
+    background-color: #cccccc;
+    color: white;
+}
+.text-md-center{
+    text-align: center!important;
+    
+}
+img.circulo{border-radius: 50%;
+}
+
+    .HorizontalCenter{
+        text-align: center;
+    }
+
+    main .Feed:last-child{
+        width: 85%;
+    }
+
+    main .Feed{
+        width: 15%;
+        float: left;
+    }
+
+    form{
+        width: 100%;
+    }
+    form *{
+        margin-bottom: 0.5rem;
+    }
+    form span{
+        width: 4rem;
+        display: block;
+        float: left;
+        font-size: 1rem;
+    }
+    form input[type=text]{
+        width: calc(100% - 4.25rem);
+
+    }
+    form textarea{
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+    form input[type=reset], form input[type=submit]{
+        float: right;
+        margin-left: 1rem;
+    }
+
+    .CommentCard{
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        padding: 5px;
+        height: 250px;
+        border: 3px solid white;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    .UserData{
+        font-size: 1.3rem;
+        height: 1.3rem;
+        padding-left: 5px;
+        margin: 0;
+    }
+
+    .Comment{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        word-break: break-all;
+        padding-left: 10px;
+        text-indent: 2rem;
+        font-size: 1.3rem;
+        height: calc( -2.6rem + 100%);
+        overflow-y: auto;
+    }
+</style>
+<body>
+    <header class="table">
+        <div class="table-cell">
+            <div class="table fullheight">
+                <section class="col-3 table-cell">
+                    <div class="text-md-center"><img class="circulo" src="sloth.jpg" alt="logo" width="100" height="100"></div>
+                  
+                </section>
+                <section class="col-6 table-cell">
+                    <div id="navigation" class="table">
+                        <div>
+                            <span><a href="?home">Home</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Functional">Functional</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Automation">Automation</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Performance">Performance</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?help">Help</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?about">About</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?contact">Contact</a></span>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+                <section class="col-3 table-cell">
+                    <div id="settings" class="table fullheight">
+                        <div class="table fullheight">
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span><a href="?logout">Log Out</a></span>
+                                    <span>&nbsp;|&nbsp;</span>
+                                    <span><a href="?settings">Settings</a></span>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span><a href="#">Orli el poderoso legendario</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="HorizontalCenter">Feed de comentarios</h1>
+        <div class="Feed">
+            <form id="forma" onsubmit="Submit(this)" method="GET" >
+                <span>Nombre: </span>
+                <input type="text" id="nombre" />
+                <span>Apellido: </span>
+                <input type="text" id="apellido" />
+                <span>Email: </span>
+                <input type="text" id="email" />
+                <span>Nick: </span>
+                <input type="text" id="nick" />
+                <span>Título: </span>
+                <input type="text" id="titulo" />
+                <span>Comentario: </span>
+                <textarea id="comment"></textarea>
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reset" />
+            </form>
+        </div>
+
+        <div class="Feed" id="_FEED_AJAX_REQUEST_FILL_"></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

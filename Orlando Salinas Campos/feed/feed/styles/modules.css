@@ -1,0 +1,86 @@
+/*----  Content  ----*/
+main {
+    padding-top: 110px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.module-template{
+    position: relative;
+    float: left;
+    border: 1px solid #888888;
+    width: 450px;
+    height: 250px;
+    border-radius: 1rem;
+    background: #f1f1f1;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    overflow:hidden;
+}
+
+.module-template > h3{
+    height: 20%;
+}
+
+.module-template > h3 *{
+    vertical-align: middle;
+}
+
+.module-template > h3 *:first-child{
+    width: 45px;
+    margin-right: 0.5rem;
+}
+
+.module-template *:first-child > img{
+    width: 42px;
+    height: 42px;
+    float: left;
+}
+
+.module-template > div{
+    position: absolute;
+    bottom: 0.5rem;
+    padding-right: 2rem;
+    width: 100%;
+}
+
+.module-template > p {
+    overflow: hidden;
+    color: #959595;
+    font-size: 1.5rem;
+    word-break: keep-all;
+    position: relative; 
+    line-height: 1.6rem;
+    max-height: 9.5rem; 
+    text-align: justify;  
+    margin-right: -0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.5rem;
+}
+
+.module-template > p:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0rem;
+}
+
+.module-template > p:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+}
+
+.module-template *:last-child *:last-child{
+    float: right;
+}
+
+h2 span > a > img{
+    width: 48px;
+    height: 48px;
+    margin-left: 1rem;
+}
