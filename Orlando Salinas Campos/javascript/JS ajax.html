@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (){
+      if( this.readyState == 4 && this.status == 200)
+      {
+        var container = document.getElementById("elements");
+        var doc = xhttp.responseXML;
+        var books = doc.getElementByTagName("book");
+        for( var i = 0; i < books.length; i++)
+        {
+        var gen = "<p>";
+        for( var j = 0; j < books[i].children.length; j++)
+        {
+          gen += books[i].children[j].nodeName +
+          ": " + books[i].children[j].childNodes[0].nodeValue + "<br>";
+        }
+        gen += "</p>"
+        container.innerHTML += gen;
+      }
+    }
+    };
+    xhttp.open("GET", "books.xml")
+    xhttp.send();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

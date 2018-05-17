@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+</head>
+<body>
+
+	<h1>Simulador de tareas</h1>
+	<h2 id="loading" style="float: right;">Task completed: 0%</h2>
+
+	<script>
+		
+		var flag = true;
+		var i = 1;
+		var load = document.getElementById("loading");
+		var funcion = () => {
+
+		};
+
+		var task = setInterval(
+			() =>
+			//() => es lo mismo que function()
+			{
+				if( flag )
+				{
+					load.innerHTML = "Task completed: " + Math.ceil( (i / 500) * 100 ) + "%";
+				}
+				else
+					clearInterval( task );
+				i++;
+				flag = i == 500 ? false : true;
+			},
+			33
+		);
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="Tema1">Hola</h1>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+    <script> 
+    /* $(document).ready(function(){
+        $('#hide').click(function(){
+            $('#Tema1').hide();
+        });
+        $('#show').click(function(){
+            $('#Tema1').show();
+        })
+    }); */
+    $(document).ready(function(){
+        
+    if($('#Tema1').css('display', 'none')){
+      $('#hide').click(function(){
+          $('#Tema1').show()
+      })
+    }
+    else if($('#Tema1').css('display', 'block')){
+        $('#hide').click(function(){
+            $('#Tema1').hide()
+        })
+    }
+});
+    </script>
+</body>
+</html>

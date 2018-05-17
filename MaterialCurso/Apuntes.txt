@@ -1,0 +1,513 @@
+Conceptos básicos HTML
+    *Qué es una etiqueta
+        -Un elemento web
+        Ejemplo: <ETIQUETA />
+        Ejemplo: <ETIQUETA></ETIQUETA>
+
+    *Mencione qué va dentro de las etiquetas
+        -Contenido
+
+    *Mencione qué puede ir dentro de la etiqueta antes del cierre de ésta
+        -Atributos (class, style, type, id, name, onclick, value)
+        Ejemplo: <ETIQUETA atributo />
+        Ejemplo: <ETIQUETA atributo></ETIQUETA>
+
+    *¿Cómo se asignan los atributos de una etiqueta?
+        -> ATRIBUTO="valor" 
+        Ejemplo: <input type="text" />
+
+    *Escriba la etiqueta CODELLEGE con el atributo horario que tenga el valor 8:30 A.M., el atributo sala que tenga el valor de Linares y profesor que tenga el valor Rodrigo,Kevin
+        -> <CODELLEGE horario="8:30 A.M." sala="Linares" profesor="Rodrigo,Kevin"></CODELLEGE>
+
+    *Qué tipos de etiquetas existen
+        - Doble etiqueta: <div>contenido</div>
+        - Etiqueta individual: <input type="text" /> ó <input type="text">
+        - Etiquetas mixtas: <li>Valor</li> ó <li>Valor
+    
+    *Qué es una página web
+        - Es un conjunto de etiquetas
+
+    *Escribe la estructura básica de HTML
+        <!DOCTYPE html> //Opcional, define el tipo de documento (Por default HTML 5)
+        <html>
+            <head>
+            </head>
+            <body>
+            </body>
+        </html>
+
+    *Describa todas las etiquetas que pueda (Incluya su comportamiento por defecto)
+        <div>: División, tiene un display de block, toma el 100% del width. No tiene height, crece con su contenido.
+        <nav>: Navegación, contiene una lista. Tiene display block, por lo que tiene width del 100%. Similar al div.
+        <meta>: Define propiedades globales de la página (charset, viewports, compatibilidades)
+        <link>: Importar (CSS, librerías JS, Fuentes, Multimedia, Frameworks, etc.)
+        <head>: Encabezado de la página, define la estructura de nuestra página al incializar (Propiedades)
+        <body>: Cuerpo de página. Todo el contenido de la página
+        <section>: Una sección. Igual al div (HTML 5)
+        <header>: La parte principal del body. Igual al div (HTML 5)
+        <footer>: La parte final (Pie de página). Igual al div (HTML 5)
+        <html>: Define que la página es un documento HTML
+        <p>: Es un párrafo de texto. Igual al div pero incluye márgenes y padding.
+        <span>: Es una línea o palabra. Tiene display inline-block. No tiene width ni height pero tiene márgenes
+        <br>: Salto de línea
+        <a>: Es una referencia a un enlace/link (Hipervínculo). Igual al span pero sin márgenes, cursor pointer y texto de color y subrayado.
+        <img>: Es una etiqueta que contiene una imagen. Igual al span sin márgenes
+        <ul>: Lista no ordenada. Igual al div pero con márgenes
+        <ol>: Lista ordenada. Igual al div pero con márgenes y numera/ordenado los elementos
+        <li>: Elemento de la lista (ol ó ul)
+        <table>: Crea una tabla. Igual que el div con márgenes y padding
+
+Conceptos básicos de CSS
+    *Qué significa CSS
+        -Cascading Style Sheet (Hoja de estilos en cascada)
+    
+    *Por qué se le dice "en cascada"
+        -Va en orden (Arriba hacia abajo)
+
+    *Qué es una regla de CSS
+        -Conjunto de propiedades definidas para un identificador
+
+    *Qué es un selector
+        -Identifica a un elemento
+
+    *Cómo se define una clase
+        -> .Clase, .Clase-algo, .Clase1
+
+    *Cómo se pone el selector para ID's
+        -> #id
+
+    *Qué es un nodo
+        -> Padre (Nodo) -> Hijo (Nodo)
+
+    *Mencione selectores de nodos
+        -Seleccionar todos los nodos iguales:
+            - SELECTOR, SELECTOR OTROSELECTOR, .CLASE, .CLASE OTROSELECTOR, #ID, #ID OTRO SELECTOR
+            Ejemplo: p{}, div p{}, .clase{}, .clase SELECTOR{}, #id{}, #id SELECTOR{}
+        -Seleccionar nodo siguiente:
+            - SELECTOR > SELECTOR
+            Ejemplo: div > p{}
+            <div> <img/> <p><span></p> <p></p> </div>
+
+    *Mencione pseudo-clases
+        -selector:hover -> Mouse encima
+        -selector:link -> Para un <a> (Cuando no ha sido visitado)
+        -selector:visited -> Para <a> ya visitado (Cuando se pone morado el link)
+        -selector:active -> Elemento activo (Solo los que interactúan)
+        -selector:first-child -> Selecciona el primer elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+            </ul>
+            ul li:first-child{} //Toma al primer elemento del tipo li, o sea, <li>A
+        -selector:last-child -> Selecciona el último elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+            </ul>
+            ul li:first-child{} //Toma al último elemento del tipo li, o sea, <li>C
+        -selector:nth-child( X ) //Toma al X elemento de este tipo de selector
+            <ul>
+                <li>A
+                <li>B
+                <li>C
+                <li>D
+                <li>E
+            </ul>
+            ul li:nth-child(2) //Toma el elemento 2 del tipo li, o sea, <li>B
+        
+    *Define una regla para un todos los <p> dentro de un <div> que está en una sección con la clase "Principal"
+        -> .Principal div p {}
+
+    *Qué es una propiedad en CSS
+        -Es una propiedad de estilo del elemento
+        Ejemplo: 
+            -max-width: 50%;
+            -text-align: center;
+
+    *Crear una regla para el primer <span> dentro de un párrafo con clase "Descripcion" que se encuentra en un div dentro del primer artículo de una sección con id "Inicio"
+        #Inicio > article div .Descripcion > span {
+            
+        }
+
+    *A la regla anterior, aplicar el estilo de negritas, color de texto gris oscuro, tamaño de fuente de 1 y medio de la fuente del navegador, borde inferior de 1 pixel color azul
+        #Inicio > article div .Descripcion > span {
+            font-weight: bold;
+            color: #888888;
+            font-size: 1.5rem;
+            border-bottom: 1px solid blue;
+        }
+
+    *Describa cada diferencia entre Margin, Padding y Border
+        -Border: Está en las orillas del elemento, se dibuja y es visible al usuario.
+        -Margin: Lo separa en las orillas, pero NO es las orilla
+        -Padding: Está dentro del elemento, no es visible y es el espaciado de las orillas hacia dentro
+
+    *Describa los comportamientos de los tipos de display
+        -block: width de 100%. No tiene altura
+        -inline-block: En la misma línea, tiene un pequeño margen. Se usa para palabras o texto en línea. Se puede cambiar la la altura y el ancho.
+        -table: Crea una tabla en el elemento Padre y se autoajusta a su contenido
+        -table-cell: Hace que un elemento sea una celda de una tabla (Se autoajusta). Habilita la propiedad vertical-align
+        -table-row: Hace que un elemento sea un renglón de una tabla (Se autoajusta)
+        -inline: Igual que el inline-block. Solo en la misma línea, o puedes cambiar la altura y ancho
+
+    *Describa los tipos de posicionamiento
+        -absolute: Posiciona el elemento encima de todos los demás, en left:0, top:0 del padre
+        -relative: Acomoda los elementos relativamente a sus display. Habilita la posición absolute de un elemento. Body es la etiqueta con position relative por defecto.
+        -fixed: Deja un elemento fijo en esa posición de la página (lo que ves)
+
+Conceptos básicos de JavaScript
+    *Qué es JavaScript
+        -Es un lenguaje funcional de programación (Web). Es el lenguaje intérprete de los navegadores.
+
+    *Cómo se escribe código JavaScript en una página HTML:
+        -Agregando la etiqueta <script> //Código </script>
+
+    *Cómo se crean librerías de JavaScript
+        -Se crea un archivo con la extensión .JS
+        -No se agregan las etiquetas <script></script>. Solo se escribe código JS en el archivo
+
+    *Regularmente, qué va dentro de una librería de JavaScript:
+        -Rara vez, se crean variables globales
+        -Funciones
+        -Definiciones de clases
+        NOTA: NO DEBERÍAMOS AGREGAR LÍNEAS QUE EJECUTEN CÓDIGO.
+            Ejemplo:
+                alert( "Librería cargada" );
+
+    *Escriba cómo se definen variables en JS:
+        - var NOMBRE;
+        - var NOMBRE = VALOR;
+        Donde VALOR puede ser cualquier tipo de dato.
+
+    *Escriba los tipos de dato en JS:
+        - numeric: 1, 1.2, 0.4, etc.
+        - string: "Texto", "T", 'Texto', 'T'
+        - bool: true | false
+        - array: [ VALOR, VALOR, VALOR , ... ] -> VALOR debe ser el mismo tipo de dato para todos dentro del arreglo
+        - object: { VAR: VALOR, VAR: VALOR ... } -> VAR es el nombre de una variable (propiedad, atributos), no se declara con la palabra var, solo se le asigna el nombre que lo identifica.
+        - func: NOMBRE_FUNCION -> Solo se asigna el nombre de la función a una variable
+
+    *Cómo se declara una función en JS:
+        function apuntes()
+        {
+            
+        }
+    
+    *Cómo se declara una función parametrizasa en JS:
+        function apunter( fileLocation )
+        {
+
+        }
+    
+    *Explique del bloque de código anterior, de qué me sirve tener parametrizada la función:
+        - Los parámetros son datos necesarios que las instrucciones o alguna instrucción en específico de la función lo necesita para poder realizarse. Vuelve a las funciones dinámicas, hacen lo mismo pero con valores diferentes.
+        Ejemplo: Se tiene una función que muestra una alerta de bienvenida. La bienvenida dice VALOR ", " VALOR.
+
+        function bienvenida( saludo, nombrePersona )
+        {
+            alert( saludo + ", " + nombrePersona );
+        }
+
+    *Del ejemplo anterior escriba qué resultado muestra la llamada a la función con estos datos: bienvenida( "Hola", "Alex" );
+        - Hola, Alex
+
+    *Muestre las diferencias entre bievenida(); y bienvenida( "Hola", "Alex" ); :
+        function bienvenida() //Función no parametrizada
+        {
+            alert( "Hola nuevo usuario! Bienvenido a Codellege!" );
+        }
+
+        function bienvenida( saludo, persona ) //Función parametrizada
+        {
+            alert( saludo + ", " + persona + "! Bienvenido a Codellege" );
+        }
+
+        - La primer función siempre muestra lo mismo.
+        - La función parametrizada muestra resultados diferentes, pero sigue haciendo lo mismo.
+
+    *Qué es un parámetro de una función:
+        - Una variable. Los parámetros se separan por ','. Puede haber N cantidad de parámetros.
+        Ejemplo:
+            function f(){} //0 parámetros. Se le conoce como función no parametrizada
+            function f( nombre ){} //1 parámetro. Cuando tiene 1 o más parámetros, se le conoce como función parametrizada
+            function f( nombre, saludo ){} //2 parámtros. Los parámetros se separan por coma ','
+            function f( nombre, saludo, mensaje ){} //3 parámetros. Puede haber N cantidad de parámetros.
+
+    *Cómo se convierte un función en valor:
+        - Se agrega la palabra reservada 'return' y el valor que se desea retornar.
+        function suma( a, b )
+        {
+            //var suma = a + b;
+            //return suma;
+            return a + b;
+        }
+
+    *Escriba una función que se llame sumarEdades, a la que le pase como parámetro un arreglo de personas. De cada persona obtenga su atributo edad y súmelos todos. Regrese el resultado:
+
+    function sumarEdades( personas )
+    {
+        var suma = 0;
+        for( var i = 0; i < personas.length; i++ )
+        {
+            var persona = personas[i];
+            var edad = persona.edad;
+            suma += edad;
+            //suma = suma + edad;
+        }
+
+        return suma;
+    }
+
+    *Escriba la estructura del ciclo for:
+        for( var i = N; i [<><=>=] M; i++ ) //Está mal
+        {
+
+        }
+
+    *Ciclar 100 veces una instrucción:
+        for( var a = 0; a <= 99; a++)
+        {
+
+        }
+
+    *Escriba una arreglo de 15 elementos y guárdelo en la referencia "arreglo":
+        var arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+    *Del ejercicio anterior, escriba cuál es el valor del elemento de la posición 6:
+        - 7
+
+    *Almacene en una variable el valor del ejercicio anterior:
+        var ejercicioAnterior = arreglo[6];
+
+    *Cree un objeto persona. Agregue los atributos nombre, apellido, sexo, edad, RFC, ciudad, estado y país.
+        var persona =
+        {
+            nombre: "Orlando",
+            apellido: "Salinas de Gortari",
+            sexo: "M",
+            edad: 22,
+            RFC: "OSG1234563454",
+            ciudad: "SaltilloYork",
+            estado: "Coahuila",
+            pais: "México"
+        };
+
+    *Guarde en la referencia "nombreCompleto" el valor del nombre con un espacio y el apellido de la "persona":
+        var nombreCompleto = persona.nombre + " " + persona.apellido;
+
+    *Con qué atributo y de qué objeto podemos obtener acceso a nuestro cuerpo de la página:
+        - document.body
+        Donde document es el objeto del documento (html) y body es el atributo, un objeto que representa al elemento <body>
+
+    *Escriba las funciones que pueden ayudarnos a encontrar elementos web:
+        - document.getElementById( 'id' );              -> Retorna un HTMLElement object
+        - document.getElementsByName( 'name' );         -> Retorna un arreglo de HTMLElement object
+        - document.getElementsByClassName( 'clase' );    -> Retorna un arreglo de HTMLElement object
+        - document.getElementsByTagName( 'div' );        -> Retorna un arreglo de HTMLElement object
+
+    *Explique qué ocurre en la siguiente sentencia. Ejemplifique con bloques de código HTML:
+        var x = document.getElementsByName( "control" );
+
+        - La variable 'x' almacena un arreglo de objetos HTMLElement.
+        - Utiliza el parámetro de la función, que es un tipo de dato string que representa el atributo name del elemento:
+            <div name="control"></div>
+            <p name="control"></p>
+            <span name="control"></span>
+        - x ha creado un arreglo con los 3 objetos del código HTML de arriba
+
+    *Almacene en la referencia "tercero" el elemento que representa al párrafo:
+        var tercero = document.getElementsByTagName( 'p' )[0]
+        var tercero = document.getElementsByName( 'control' )[1];
+
+    *Cree un objeto auditor, que tiene los atributos empleado y un arreglo de objetos especialistas que representan objetos del tipo especialista. El especialista tiene un atributo empleado. Empleado es un objeto con los atributos nombre, apellido, IS, departamento, posicion.
+
+        var _especialistas =
+        [
+            {
+                empleado:
+                {
+                    nombre: "Kevin",
+                    apellido: "Martin del Campo",
+                    IS: "KMCF",
+                    departamento: "Quality Assurance",
+                    posicion: "Consultor"
+                }
+            },
+            {
+                empleado:
+                {
+                    nombre: "Rodrigo",
+                    apellido: "González",
+                    IS: "RGRR",
+                    departamento: "Application Management and Support",
+                    posicion: "AMS"
+                }
+            }
+        ];
+
+        var auditor = 
+        {
+            empleado:
+            {
+                nombre: "Virginia",
+                apellido: "Martínez",
+                IS: "VMR",
+                departamento: "Quality Assurance",
+                posicion: "Delivery Manager"
+            }
+            especialistas: _especialistas;
+        };
+
+        var rodrigo = auditor.especialistas[1].nombre;
+
+Conceptos básicos de jQuery
+    *Qué es jQuery:
+        - Es una librería de JS.
+
+    *Cuál es la función global de jQuery y cómo se llama:
+        - $( params ) y se llama 'jQuery'
+
+    *Cómo busco un elemento en el documento con jQuery. Escriba las diferentes formas que sepa y su equivalente en JS:
+        - $( 'p' ) -> document.getElementsByTagName( 'p' ) -> Retorna un arreglo de jQueryElement
+        - $( '.nombre_clase' ) -> document.getElementsByClassName( 'nombre_clase' ) -> Retorna un arreglo de jQueryElement
+        - $( '#nombre_id' ) -> document.getElementById( 'nombre_id' ) -> Retorna un objeto de jQueryElement
+        - $( 'nombre_name' ) -> document.getElementsByName( 'name' ) -> Retorna un array de jQueryElement
+        - $( document ) -> document -> Retorna el objeto document que representa al documento <HTML>
+        - $( window ) -> window -> Retorna al objeto que window que representa a la ventana del navegador
+
+    *Cómo se crean eventos en JS y escriba su equivalente en jQuery:
+        document.onload = function() { //Qué hacer };
+        document.addEventListener( "onload", function(){ //Qué hacer } );
+        elemento.evento... -> Todos los eventos son funciones
+
+        $( document ).ready(function() { //Qué hacer });
+        $( window ).load(function() { //Qué hacer });
+        $( elemento ).click(function() { //Qué hacer });
+
+        <div onclick="nombre_funcion()"></div>
+
+    *Escriba el equivalente de modificar el contenido de una etiqueta en JS y en jQuery:
+        document.body -> Es el objeto HTMLElement que representa a la etiqueta <body>
+        document.getElement...( param ) -> Retorna un objeto o arreglo de objetos HTMLElement que representa al o los elementos de dicho parámetro.
+
+        //JavaScript
+        document.body.innerHTML = "<etiquetas>CONTENIDO</etiquetas>";
+        document.getElementById( 'nombre_id' ).innerHTML = "...";
+
+        //jQuery
+        $( 'body' ).html( "contenido... <adf></adf>" );
+        $( '#nombre_id' ).html( "contenido" );
+
+    *Escriba el código necesario en jQuery para hacer que el siguiente bloque HTML, muestre un alert en el evento click del botón:
+        //HTML
+        <div>
+            <label class="boton">Mostrar alerta: </label>
+            //<button id="boton">Mostrar</button>
+            //<button name="boton">Mostrar</button>
+            //<button class="boton">Mostrar</button>
+            <button>Mostrar</button>
+        </div>
+
+        //jQuery
+        $( '#boton' ).click( function(){ alert("Hola"); } );
+        $( 'button' )[0].click( function(){ alert("Hola"); } );
+        $( 'boton' )[0].click( function(){ alert("Hola"); } );
+        $( '.boton' )[1].click( function(){ alert("Hola"); } );
+
+    *Escriba cómo importar la librería de jQuery:
+        <script src="https://www.kjddkladkdkl/jQuery.0.3.1.js"></script>
+
+Conceptos básicos de AJAX y JS Asíncrono
+    *Qué es programación asíncrona:
+        -Es ejecutar múltiples tareas al mismo tiempo, en background. Es pausar las actividades simultáneamente para lograr ejecutarlas sin afectar el rendimiento (No ciclar o trabar la página).
+
+    *Para qué sirve la función setTimeout(). Escriba su definición de referencia:
+        -Es un temporizador. Su definición es: window.setTimeout( func, milliseconds );
+            -Espera un tiempo milisegundos (milliseconds) para ejecutar una función (func).
+            Ejemplo:
+                setTimeout( () => { alert("Esperé 5 segundos (5000 milisegundos) y me ejecuté"); }, 5000 );
+
+    *Para qué sirve la función setInterval(). Escriba su definición de referencia:
+        -Es un ciclo temporizado. Funciona igual que setTimeout, pero repite la función un número indefinido de veces.
+        Para detener el ciclo del intervalo, se utiliza la función clearInterval().
+        Ejemplo:
+
+        <h1>Simulador de tareas</h1>
+        <h2 id="loading" style="float: right;">Task completed: 0%</h2>
+
+        <script>
+            
+            var flag = true;
+            var i = 1;
+            var load = document.getElementById("loading");
+            var funcion = () => {
+
+            };
+
+            var task = setInterval(
+                () =>
+                //() => es lo mismo que function()
+                {
+                    if( flag )
+                    {
+                        load.innerHTML = "Task completed: " + Math.ceil( (i / 500) * 100 ) + "%";
+                    }
+                    else
+                        clearInterval( task );
+                    i++;
+                    flag = i == 500 ? false : true;
+                },
+                33
+            );
+        </script>
+
+    *Qué es XML:
+        -Son las siglas de eXtensible Markup Language. Es una notación de etiquetas y representa objetos o estructuras en nodos y atributos (Que puedes ser nodos).
+            Ejemplo:
+
+            <persona nombre="Kevin" apellido="Martin del Campo" edad=22 sexo="MACHO MACHÍN">
+                <domicilio calle="..." colonia="..." ciudad="...">
+                    <algo a="" />
+                </domicilio>
+            </persona>
+
+            //persona
+            var kevin = 
+            {
+                nombre: "Kevin",
+                apellido: "Martin del Campo",
+                edad: 22,
+                sexo: "MACHO MEN",
+                domicilio:
+                {
+                    calle: "Valle de los pinos",
+                    colonia: "Real del Valle",
+                    ciudad: "Santa Catarina",
+                    numero: 1368,
+                    estado: "Nuevo León",
+                    algo: 
+                    {
+                        a: "",
+                        b: ...
+                    } 
+                }
+            }
+    
+    *Qué es AJAX:
+        -Es una extensión de JavaScript y actualmente es una extensión por defecto de los navegadores modernos.
+        Son las siglas para Asynchronous Javascript And XML. Es un objeto que permite la comunicación con servidorer (Web server) para consumir servicios, enviar peticiones y recibir respuestas sin necesidad de recargar la página (Por ejemplo, un submit de form:POST).
+
+    *Cuál es la estructura básica de AJAX (Para método GET)
+        
+        var xhttp = new XMLHttpRequest(); //Objeto que permite hacer comunicación con Web Servers
+        xhttp.onreadystatechange = function() {
+            //Método que se ejecuta después de preparar la petición (xhttp.open())
+            //Se puede jugar con los códigos de resultados: this.status (100, 200, 400, etc) y this.readyStatus (0-4)
+        };
+        xhttp.open("GET", "service/service.ext", true); //Definir tipo de método, url y si va a ser o no asíncrona la petición
+        xhttp.send(); //Enviar la petición al servidor.
+
+        -Se utiliza this.responseText o this.responseXML para interpretar los datos traídos del servidor.
+        -Cuando un servidor retorna una respuesta en JSON, utilizamos this.responseText para obtener todo el resultado "raw" y lo parseamos con la librería JSON.parse( texto ) y nos convierte la respuesta de JSON a objetos de JS.

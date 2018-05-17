@@ -123,6 +123,40 @@
 
 <body>
 
+
+  <script type="text/javascript"> 
+  ducument.body.innerHTML +='<h1> sucursales de la tienda </h1>'
+  
+  for (var i = 0; i< carnitaAsada.sucursales.length; i+ +  ) 
+  {
+var colonia = carnitaAsada.sucursales.[i].colonia;
+var numero = carnitaAsada.sucursales[i].numero;
+var calle = carnitaAsada.sucursales[i].calle;
+var nombre = carnitaAsada.sucursales[i].nombre;
+var articulos = carnitaAsada.sucursales[i].articulos;
+
+document.body.innerHTML+ = '<h3 > sucursal: ' <h3> sucursal '+ nombre + "</br>" + colonia + "</br> + numero+ "</br>" + calle + "</br>" +  "</br>" + '</h3>' 
+
+for (var b = 0; b<carnitaAsada.sucursales.articulos.length; b++){
+  var articulos= carnitaAsada.sucursales[i].articulos[b]:
+  document.body.innerHTML += "<h3> Aritculos:" + articulos "  + articulos + "<h3>";
+
+       ///document.body.HTML+= <h3>Articulos:"+ clave + " </h3>///
+
+for (var c=0 ; c < productos.length; c++ ){
+  if(calve== productos[c].clave)
+  {
+    var producto= productos[c];
+    document.body.innerHTML+='<h3>articulo: '+ producto.nombre + ', $ '+ producto.precio + '</h3>'
+  }
+}
+
+}  
+
+
+  } 
+
+  </script>
 </body>
 
 </html>

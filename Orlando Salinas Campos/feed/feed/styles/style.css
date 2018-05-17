@@ -1,0 +1,96 @@
+/*----  Common  ----*/ 
+
+h1, h2, h3, h4, h5, h6{
+    color: #959595;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.float-left{
+    float: left;
+}
+.clear-float{
+    clear: both;
+}
+.overflow-auto{
+    overflow: auto;
+}
+
+.table-cell{
+    display: table-cell;
+}
+.table-row{
+    display: table-row;
+}
+.table{
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    height: 1px;
+}
+.vertical-align-middle{
+    vertical-align: middle;
+}
+.vertical-align-top{
+    vertical-align: top;
+}
+.vertical-align-bottom{
+    vertical-align: bottom;
+}
+
+.fullheight{
+    height: 100%;
+}
+
+.col-1{
+    width: 8.337%;
+}
+.col-2{
+    width: 16.667%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.337%;
+}
+.col-5{
+    width: 41.667%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.667%;
+}
+.col-9{
+    width: 75%;
+}
+
+.row-3{
+    height: 75%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+a, a:visited{
+    color: #888888;
+}
+
+header, main, footer{
+    padding: 0.5rem;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p:first").addClass("intro");
+    });
+});
+</script>
+<style>
+.intro {
+    font-size: 150%;
+    color: red;
+}
+</style>
+
+</head>
+<body>
+
+
+<h1>Este es el poderoso H1</h1>
+
+<p>Este es una P normal con posibilidad de ser poderoso<p>
+<p>Este tambien es P</p>
+
+<button>Si le picas a este boton, vas a cambiar el primer P por un P bien poderoso</button>
+
+</body>
+</html>

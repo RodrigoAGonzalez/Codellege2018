@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>horarios</title>
+
+  <script type="text/javascript">
+    var salon1 = {
+      grupo: "1a",
+      alumnos: [{
+          nombre: "hugo",
+          apellido: "rock",
+          edad: 30,
+          semestre: 8,
+          matricula: 14480001,
+          materias: ["CODE5", "INGL2", "ORIE5"]
+        },
+
+        {
+          nombre: "orlando",
+          apellido: "salinas",
+          edad: 22,
+          semestre: 1,
+          matricula: 14480002,
+          materias: ["CODE5", "INGL5", "ORIE1"]
+        },
+
+        {
+          nombre: "emmanuel",
+          apellido: "rodriguez",
+          edad: 21,
+          semestre: 1,
+          matricula: 14480535,
+          materias: ["CODE4", "INGL5", "ORIE1"]
+        },
+
+        {
+          nombre: "alejandro",
+          apellido: "torres",
+          edad: 16,
+          semestre: 2,
+          matricula: 14480003,
+          materias: ["CODE3", "INGL5", "ORIE4"]
+        },
+
+        {
+          nombre: "hector",
+          apellido: "martinez",
+          edad: 26,
+          semestre: 6,
+          matricula: 14480004,
+          materias: ["CODE1", "INGL2", "ORIE5"]
+        },
+
+        {
+          nombre: "manuel",
+          apellido: "rodriguez",
+          edad: 23,
+          semestre: 100,
+          matricula: 14480005,
+          materias: ["CODE5", "INGL5", "CLCOMP3"]
+        },
+
+        {
+          nombre: "teresa",
+          apellido: "mata",
+          edad: 26,
+          semestre: 7,
+          matricula: 14480006,
+          materias: ["CODE4", "INGL3", "ORIE5"]
+        },
+
+        {
+          nombre: "elena",
+          apellido: "latourniere",
+          edad: 24,
+          semestre: 5,
+          matricula: 14480007,
+          materias: ["CODE1", "INGL1", "ORIE1"]
+        }
+      ]
+    };
+
+    var salon2 = {
+      grupo: "1b",
+      alumnos: [{
+          nombre: "mera",
+          apellido: "medrano",
+          edad: 21,
+          semestre: 8,
+          matricula: 14480010,
+          materias: ["ORIE5"]
+        },
+
+        {
+          nombre: "miguel",
+          apellido: "nava",
+          edad: 22,
+          semestre: 1,
+          matricula: 14480011,
+          materias: ["INGL5"]
+        },
+
+        {
+          nombre: "martha",
+          apellido: "casillas",
+          edad: 38,
+          semestre: 9,
+          matricula: 14480012,
+          materias: ["CODE5"]
+        },
+
+        {
+          nombre: "magaly",
+          apellido: "leija",
+          edad: 21,
+          semestre: 3,
+          matricula: 14480013,
+          materias: ["INGL5"]
+        },
+
+        {
+          nombre: "andres",
+          apellido: "gonzalez",
+          edad: 24,
+          semestre: 6,
+          matricula: 14480014,
+          materias: ["CODE5"]
+        }
+      ]
+    };
+
+
+    var salon3 = {
+      grupo: "1c",
+      alumnos: [{
+          nombre: "lodoviko",
+          apellido: "peluche",
+          edad: 40,
+          semestre: 8,
+          matricula: 14480020,
+          materias: ["ORIE4", "INGL2"]
+        },
+
+        {
+          nombre: "federica",
+          apellido: "peluche",
+          edad: 33,
+          semestre: 1,
+          matricula: 14480021,
+          materias: ["INGL5", "ORIE4"]
+        },
+
+        {
+          nombre: "humberto",
+          apellido: "suazo",
+          edad: 31,
+          semestre: 8,
+          matricula: 14480022,
+          materias: ["CODE5", "INGL1"]
+        },
+
+        {
+          nombre: "jesus",
+          apellido: "arrellano",
+          edad: 50,
+          semestre: 4,
+          matricula: 14480023,
+          materias: ["INGL5", "CODE3", "ORIE5"]
+        },
+      ]
+    };
+
+    var salones = [salon1, salon2, salon3];
+
+
+    {
+      nombre: "codigo 3",
+      clave: "CODE3",
+      maestro: ["MCOD1", "MCOD2"]
+    },
+
+    {
+      nombre: "codigo 4",
+      clave: "CODE4",
+      maestro: ["MCOD1", "MCOD2"]
+    },
+
+    {
+      nombre: "codigo 5",
+      clave: "CODE5",
+      maestro: ["MCOD1", "MCOD2"]
+    },
+
+    {
+      nombre: "orientacion 1",
+      clave: "ORIE1",
+      maestro: ["MORI1"]
+    },
+
+    {
+      nombre: "orientacion 2",
+      clave: "ORIE2",
+      maestro: ["MORI1"]
+    },
+
+    {
+      nombre: "orientacion 3",
+      clave: "ORIE3",
+      maestro: ["MORI1"]
+    },
+
+    {
+      nombre: "orientacion 4",
+      clave: "ORIE4",
+      maestro: ["MORI1"]
+    },
+
+    {
+      nombre: "orientacion 5",
+      clave: "ORIE5",
+      maestro: ["MORI1"]
+    },
+
+    {
+      nombre: "ingles 1",
+      clave: "INGL1",
+      maestro: ["MING1"]
+    },
+
+    {
+      nombre: "ingles 2",
+      clave: "INGL2",
+      maestro: ["MING1"]
+    },
+
+    {
+      nombre: "ingles 3",
+      clave: "INGL3",
+      maestro: ["MING1"]
+    },
+
+    {
+      nombre: "ingles 4",
+      clave: "INGL4",
+      maestro: ["MING1"]
+    },
+
+    {
+      nombre: "ingles 5",
+      clave: "INGL5",
+      maestro: ["MING1"]
+    },
+    ];
+
+    var maestros = [{
+        nombre: "kevin",
+        apellido: "del campo",
+        edad: 22,
+        clave: "MCOD1"
+      },
+
+      {
+        nombre: "rodrigo",
+        apellido: "gonzalez",
+        edad: 24,
+        clave: "MCOD2"
+      },
+
+      {
+        nombre: "emmanuel",
+        apellido: "casanova",
+        edad: 25,
+        clave: "MING1"
+      },
+
+      {
+        nombre: "paola",
+        apellido: "garza",
+        edad: 24,
+        clave: "MORI1"
+      },
+
+      {
+        nombre: "samuel",
+        apellido: "casanova",
+        edad: 26,
+        clave: "BOSS1"
+      }
+    ];
+
+
+    var articulos = [{
+
+        nombre: "coca",
+        precio: 200,
+        clave: 1,
+        tipo: "consumo",
+        departamento: "abarrotes"
+
+      }
+
+      nombre: "cigarros",
+      precio: 100,
+      clave: 2,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "papas",
+      precio: 30,
+      clave: 3,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "cacahuates",
+      precio: 25,
+      clave: 4,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "aroz",
+      precio: "CODE3",
+      clave: 5,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "frijol",
+      precio: 20,
+      clave: 6,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "sopa maruchan",
+      precio: 15,
+      clave: 7,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "perico",
+      precio: 250,
+      clave: 8,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "birrias",
+      precio: 9,
+      clave: "234",
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+
+    nombre: "goma de mascar",
+      precio: 5,
+      clave: 234,
+      tipo: "consumo",
+      departamento: "abarrotes"
+
+    }
+    ];
+
+
+
+    var tiendas = [tienda1, tienda2, tienda3]; {
+      calle: "cedros",
+      numero: "1234",
+      colonia,
+      "real",
+    },
+
+
+  </script>
+
+
+</head>
+
+<body>
+  <script>
+    for (var i = 0; i < salones.length; i++) {
+
+      var salon = salones[i];
+
+      document.body.innerHTML += "" +
+        "<h2> Alumnos del grupo:" + salon.grupo + "</h2>";
+
+      var alumnos = salon.alumnos;
+      for (var j = 0; j < alumnos.length; j++) {
+        document.body.innerHTML += "" +
+          "<span style='display: block;'>" + alumnos[j].nombre + "" + alumnos[j].apellido + "</span>";
+
+      }
+    }
+  </script>
+
+</body>
+
+</html>

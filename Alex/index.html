@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Example Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Css.css" />
+    <!--<script src="main.js"></script>-->
+</head>
+<body>
+    <script>
+        var variable = () => alert('Welcome To AlexInnovations v2.0');
+        </script>
+    <header>
+        <div>
+            <ul class="navbar">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><center><button class="button" onclick="variable();">...</button></center></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Welcome To AlexInnovations v2.0</h1>
+        <hr/>
+        <h2 id="loading">LOADING... 0%</h2>
+        
+        
+    </main>
+    <footer></footer>
+    <script>
+        var flag = true;
+		var i = 1;
+		var load = document.getElementById("loading");
+		var funcion = () => {
+
+		};
+
+		var task = setInterval(
+			() =>
+			//() => es lo mismo que function()
+			{
+				if( flag )
+				{
+					load.innerHTML = "LOADING... " + Math.ceil( (i / 500) * 100 ) + "%";
+				}
+				else
+					clearInterval( task );
+				i++;
+				flag = i == 500 ? false : true;
+			},
+			10
+		);
+    </script>
+</body>
+</html>

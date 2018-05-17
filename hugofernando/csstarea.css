@@ -1,0 +1,38 @@
+.ladoizquierdo {
+ float: left;
+  width:  30%;
+  height: 100%;
+ }
+
+ .ladoderecho {
+   float: right;
+   width: 70%;
+   height: 100%;
+ }
+
+#recibiendoDatos {
+  border: gray 1px solid;
+  height:100px;
+  width: 600px;
+  overflow-y:  scroll;
+  color: yellowgreen;
+
+}
+
+html{
+  background-color: rgb(51, 44, 42)
+}
+
+h1{
+  color: yellow;
+}
+
+input:hover{
+border: 1px solid yellowgreen;
+color: yellowgreen;
+}
+
+
+label {
+  color: yellow;
+}

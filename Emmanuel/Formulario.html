@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Formulario</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-sm-3">
+        <h1>Formulario</h1>
+
+        <form onsubmit="myFunction()" method="get" id="formulario">
+          <div>
+            <label for="nombre">Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" id="nombre">
+          </div>
+          <div>
+            <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="email">
+          </div>
+          <div>
+            <label for="nick">Nick:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="nick">
+          </div>
+          <div>
+            <label for="comentario">Comentario:</label>
+            <textarea style="width 100%" id="comentario"></textarea>
+          </div>
+          <div class="button">
+            <button type="submit">Reset</button>
+            <input type="submit" name="Send" value="Send">
+          </div>
+        </form>
+        <script>
+          function myFunction() {
+
+            document.forms[0].onsubmit = function(e){
+            e.proventDefault();
+            var date = new Date();
+            var elements= document.form[0].elements;
+            '<div class="CommentCard">'
+            '<span class="UserData">'+ elements[2].value + '-' + date.toDateString() + '-'+ date.toTimeString()'</span>'
+            '<p class="comment">'+ elements[3].value + '</p>' +
+            '</div>';
+          }
+        </script>
+      </div>
+
+      <div class="col-sm-9" style="text-align:center">
+        <h2>Feed de comentarios</h2>
+        <div id"cards">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

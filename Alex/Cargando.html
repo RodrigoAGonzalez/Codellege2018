@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="loading">Task Completed: 0%</h1>
+    <script>
+		
+		var flag = true;
+		var i = 1;
+		var load = document.getElementById("loading");
+		var funcion = () => {
+
+		};
+
+		var task = setInterval(
+			() =>
+			//() => es lo mismo que function()
+			{
+				if( flag )
+				{
+					load.innerHTML = "Task completed: " + Math.ceil( (i / 500) * 100 ) + "%";
+				}
+				else
+					clearInterval( task );
+				i++;
+				flag = i == 500 ? false : true;
+			},
+			10
+		);
+	</script>
+</body>
+</html>

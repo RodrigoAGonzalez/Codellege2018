@@ -1,0 +1,43 @@
+.carton_baraja{
+    max-width: 300px;
+    /* añadir posicionamiento absoluto*/
+    /* posicionados 0px a la derecha y 0px arriba*/
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.carton_loteria{
+    /*mostrar como elementos de tipo 'bloque-en-linea' */
+    /* añadir posicionamiento relativo */
+  position: relative;
+  display: inline-block;  
+} 
+
+.carton_loteria img{
+    max-width: 200px;
+    max-height: 360px;
+}
+
+.carton_loteria > div{
+    /* añadir color de fondo color negro con transparencia al 50% */
+    /* añadir posicionamiento absoluto */
+    /* ocultar elemento */
+  display: none;
+  background-color: aliceblue;
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.selected{
+    /* añadir color de fondo negro con transparencia al 50% */
+    /* añadir posicionamiento absoluto */
+    /* añadir 8px de padding */
+    bottom: 0; left: 0;
+    top: 0; right: 0;
+    padding: 8px;
+    position: absolute;
+}

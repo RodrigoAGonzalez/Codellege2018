@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+    <script src="main.js"></script>
+    <style>
+      body{background-color: rgba(232, 250, 255, 0.616);}
+        h1{font-size: 4vw;}
+        h3{font-size: 1.4vw;}
+        section{width:20.5%; margin:2%; height:33.5vw; float:left;}
+        .desa{display:none;}
+        section:hover img{display: none;}
+        section:hover .desa{display:block;}
+      #prin{background-color:black;}
+      #prin h3{color:white;}
+    </style>
+</head>
+<body>
+  <p><a href="http://www.alexinnovations.ml">Home</a></p>
+    <div id="titulo"></div>
+    <button id="borrar" onclick="loadDoc()">Click Me</button>
+    <script>
+        
+         function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200){
+            var section = document.getElementById('titulo');
+            var doc = xhttp.responseXML;
+            var books = doc.getElementsByTagName("book");
+            var authors = doc.getElementsByTagName("author");
+            var title = doc.getElementsByTagName("title");
+            var genres = doc.getElementsByTagName("genre");
+            var prices = doc.getElementsByTagName("price");
+            var dates = doc.getElementsByTagName("publish_date");
+            for(var i = 0; i < books.length; i++){
+                //for(var j = 0; j < books[i].children.length; j++){
+                section.innerHTML += '<section class="card"><div id="prin"><h3>Autor: ' + books[i].children[0].childNodes[0].nodeValue + '</h3>'
+                  + '<h3 class="centrado">Titulo: ' + books[i].children[1].childNodes[0].nodeValue + '</h3></div>' + 
+                  '<img src="descarga.png" alt="imagen de un libro" width="80%" height="90%"/>' + 
+                  '<h3 class="desa">Genero: ' + books[i].children[2].childNodes[0].nodeValue + '</h3>' + 
+                '<h3 class="desa">Precio: '+ books[i].children[3].childNodes[0].nodeValue + '</h3>' +
+                '<h3 class="desa">Fecha: '+ books[i].children[4].childNodes[0].nodeValue + '</h3>' +
+                 '<h3 class="desa">Sinopsis: '+ books[i].children[5].childNodes[0].nodeValue + '</h3></section>';
+           // }
+              document.getElementById('borrar').style.display="none";
+            }
+        }
+    };
+    xhttp.open("GET", "books.xml", true);
+    xhttp.send();
+}
+    </script>
+</body>
+</html>

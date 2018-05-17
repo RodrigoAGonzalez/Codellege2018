@@ -1,0 +1,28 @@
+<persona nombre="Kevin" apellido="Martin del Campo" edad=22 sexo="MACHO MACHÍN">
+  <domicilio calle="..." colonia="..." ciudad="...">
+     <algo a="" />
+  </domicilio>
+</persona>
+
+
+//persona
+var kevin = 
+{
+  nombre: "Kevin",
+  apellido: "Martin del Campo",
+  edad: 22,
+  sexo: "MACHO MEN",
+  domicilio:
+  {
+     calle: "Valle de los pinos",
+     colonia: "Real del Valle",
+     ciudad: "Santa Catarina",
+     numero: 1368,
+     estado: "Nuevo León",
+     algo: 
+     {
+        a: "",
+        
+     } 
+  }
+}

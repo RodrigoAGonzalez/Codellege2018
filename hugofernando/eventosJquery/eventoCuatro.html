@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>eventoTres</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <script type="text/javascript">
+     $(document).ready(function(){
+
+      $(document).mousemove(function(e){
+        /// Para pasar el mouse a un punto y este haga algo
+        /// "e" es el objeto evento que se ha producido
+        $("#coordenadas").text("(" + e.pageX + "," + e.pageY + ")");
+      })
+    });
+
+     </script>
+
+  </head>
+  <body>
+    <div id="coordenadas"> </div>
+  </body>
+</html>

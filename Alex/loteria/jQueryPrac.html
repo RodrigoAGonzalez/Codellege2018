@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basic</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<style>
+	.success{
+		background: green;
+		padding: 10px;
+	}
+	.error{
+		padding: 10px;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<h1>jQuery Basic</h1>
+
+	<div class="jquery__append">
+		<h2>.append()</h2>
+		<p>This is a paragraph.</p>
+		<ol>
+		  <li>List item 1</li>
+		  <li>List item 2</li>
+		  <li>List item 3</li>
+		</ol>
+		<button class="jquery__append-text">Append text</button>
+		<button class="jquery__append-list">Append list item</button>
+	</div>
+
+	<div class="jquery__prepend">
+		<h2>.prepend()</h2>
+		<p>This is a paragraph.</p>
+		<ol>
+		  <li>List item 1</li>
+		  <li>List item 2</li>
+		  <li>List item 3</li>
+		</ol>
+		<button class="jquery__prepend-text">Prepend text</button>
+		<button class="jquery__prepend-list">Prepend list item</button>
+	</div>
+
+	<div class="jquery__after-before">
+		<h2>.after() .before()</h2>
+		<p><span>Content</span></p>
+		<button class="jquery__after">Inser After</button>
+		<button class="jquery__before">Insert Before</button>
+	</div>
+
+	<div class="jquery__remove">
+		<h2>.remove() .empty()</h2>
+		<div class="jquery__remove-div success">
+			<p>Some text</p>
+			<ul>
+				<li>Some list item</li>
+				<li>Some list item</li>
+				<li>Some list item</li>
+			</ul>
+		</div>
+		<button class="jquery__empty-button">Empty div</button>
+		<button class="jquery__remove-button">Remove div</button>
+	</div>
+
+	<div class="jquery__add-class">
+		<h2>.addClass()</h2>
+		<button>Add success class</button>
+	</div>
+
+	<div class="jquery__remove-class">
+		<h2>.removeClass()</h2>
+		<button class="error">Remove class 'error'</button>
+	</div>
+
+	<div class="jquery__toggle-class">
+		<h2>.toggleClass()</h2>
+		<button>Toggle class 'success'</button>
+	</div>
+
+	<div class="jquery__css">
+		<h2>.css()</h2>
+		<button>Add CSS properties</button>
+	</div>
+
+	<div class="jquery__attr">
+		<h2>.attr()</h2>
+		<p><a>Go to google.com</a></p>
+		<button>Enable link</button>
+	</div>
+
+	<div class="jquery__attr-remove">
+		<h2>.remoteAttr()</h2>
+		<p><a href="https://google.com">Go to google.com</a></p>
+		<button>Disable link</button>
+	</div>
+
+	<div class="jquery__slide-toggle">
+		<h2>.slideToggle()</h2>
+		<p>Some <br />text</p>
+		<button>Slide Toggle</button>
+	</div>
+
+	<div class="jquery__fade-toggle">
+		<h2>.fadeToggle()</h2>
+		<p>Some <br />text</p>
+		<button>Fade Toggle</button>
+	</div>
+
+	<div class="jquery__toggle">
+		<h2>.toggle()</h2>
+		<p>Some <br />text</p>
+		<button>Toggle</button>
+	</div>
+
+	<div class="jquery__show">
+		<h2>.show()</h2>
+		<p style="display: none;">Some <br />text</p>
+		<button>Show text</button>
+	</div>
+
+	<div class="jquery__hide">
+		<h2>.hide()</h2>
+		<p>Some <br />text</p>
+		<button>Hide text</button>
+	</div>
+
+	<div class="jquery__first">
+		<h2>.first()</h2>
+		<p>Some text</p>
+		<p>Some text</p>
+		<p>Some text</p>
+		<button>Add class 'sucess' to first p</button>
+	</div>
+
+	<div class="jquery__last">
+		<h2>.last()</h2>
+		<p>Some text</p>
+		<p>Some text</p>
+		<p>Some text</p>
+		<button>Add class 'sucess' to last p</button>
+	</div>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.jquery__append-text').click(function(){
+            $('.jquery__append p').append('<b>Appended text</b>');
+		});
+		$('.jquery__append-list').click(function(){
+		    $('.jquery__append ol').append('<li>Appended item</li>');
+		});
+		$('.jquery__prepend-text').click(function(){
+			$('.jquery__prepend p').prepend('<b>Prepended text</b>');		
+		});
+		$('.jquery__prepend-list').click(function(){
+		    $('.jquery__prepend ol').prepend('<li>Prepended item</li>');
+		});
+		$('.jquery__after').click(function(){
+			$('.jquery__after-before p').after('<span>.after()</span>');
+		});
+		$('.jquery__before').click(function(){
+			$('.jquery__after-before p').before('<span>.before</span>');
+		});
+		$('.jquery__empty-button').click(function(){
+			$('.jquery__remove-div').empty();
+		})
+	});
+	
+	</script>
+</body>
+</html>

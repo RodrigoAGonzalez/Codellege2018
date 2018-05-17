@@ -1,0 +1,42 @@
+/*----  Header  ----*/
+header{
+    position: fixed;
+    border-bottom: 0.05rem solid #454545;
+}
+
+header section{
+    vertical-align: middle;
+    box-sizing: border-box;
+    color: #888888;
+}
+
+header * > #logo{
+    width: 130px;
+    box-sizing: border-box;
+    min-height: 75px;
+    background: url('../logo.png');
+    background-size: 100% 100%;
+}
+
+header * > #navigation > div{
+    display: table-row;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+header * > #settings{
+    text-align: right;
+}
+
+header * #settings div.table-row:first-child > div{
+    vertical-align: top;
+}
+
+header * #settings div.table-row:last-child > div{
+    vertical-align: middle;
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-decoration: underline;
+}

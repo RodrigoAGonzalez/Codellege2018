@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/tasks.css">
+    <title>Modules</title>
+</head>
+<body>
+    <header class="table">
+        <div class="table-cell">
+            <div class="table fullheight">
+                <section class="col-2 table-cell">
+                    <div id="logo"></div>
+                    <div class="clear-float"></div>
+                </section>
+                <section class="col-7 table-cell">
+                    <div id="navigation" class="table">
+                        <div>
+                            <span><a href="?home">Home</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Functional">Functional</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Automation">Automation</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?module=Performance">Performance</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?help">Help</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?about">About</a></span>
+                            <span>&nbsp;|&nbsp;</span>
+                            <span><a href="?contact">Contact</a></span>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+                <section class="col-3 table-cell">
+                    <div id="settings" class="table fullheight">
+                        <div class="table fullheight">
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span><a href="?logout">Log Out</a></span>
+                                    <span>&nbsp;|&nbsp;</span>
+                                    <span><a href="?settings">Settings</a></span>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <span><a href="#">Kevin Martin del Campo (KMCF)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="table fullheight">
+            <div id="content" class="table-row">
+                <h2>Loading content...</h2>
+                <br>
+                <h3>Please wait, we are almost done...</h3>
+                <br>
+                <div align="center">
+                    <img src="loader.gif" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
+
+<script>
+    window.onload = () =>{
+
+        var content = document.getElementById( "content" )
+
+        var module = getURLParameter( "module" );
+        var _module_id = getURLParameter( "details" );
+
+        if( module ){
+            GetModules( module );
+        }
+
+        else if ( _module_id )
+        {
+            GetContentForModule( _module_id );
+        }
+
+        else if( (location.search.split('?') + '' ) == '' || location.search.split('?')[1] == "home" )
+            SetHome();
+
+        else if( location.search.split('?')[1] == "about" )
+        {
+            content.innerHTML = "<h2>The about section</h2>";
+        }
+
+        else if( location.search.split('?')[1] == "help" )
+        {
+            content.innerHTML = "<h2>The help section for this specific page</h2>";
+        }
+
+        else if( location.search.split('?')[1] == "contact" )
+        {
+            content.innerHTML = "<h2>The contact section</h2>";
+        }
+
+        else 
+        {
+            var S = getURLParameter( "submit" );
+            var R = getURLParameter( "report" );
+            var A = getURLParameter( "analytics" );
+
+            if( S )
+                GetTaskForm( "S", S )
+            else if( R )
+                GetTaskForm( "R", R )
+            else if( A )
+                GetTaskForm( "A", A )
+
+            else 
+                SetHome();
+        }     
+    };
+
+    function SetHome()
+    {
+        content.innerHTML = ''+
+        '<h2>Well... This is akward!</h2>' + 
+        '<br>' + 
+        '<h3>We are still working in this page... But hey! you can have fun looking at this loading GIF :D</h3>' + 
+        '<br>' +
+        '<div align="center">' + 
+            '<img src="loader.gif" />' +
+        '</div>';
+    }
+
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
+
+</script>
